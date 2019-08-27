@@ -1,0 +1,37 @@
+element.style {
+    background-image: url(https://unsplash.it/1900/1080?image=1076);
+}
+
+.bg-image-full {
+    background: no-repeat center center scroll;
+}
+
+.pb-5, .py-5 {
+    padding-bottom: 3rem!important;
+}
+
+.ml-auto, .mx-auto {
+    margin-left: auto!important;
+}
+
+
+.mr-auto, .mx-auto {
+    margin-right: auto!important;
+}
+
+.d-block {
+    display: block!important;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+
+
