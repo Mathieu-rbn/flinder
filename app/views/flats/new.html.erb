@@ -1,0 +1,116 @@
+<div class="container w-50">
+  <h2>Add your flat</h2>
+  <%= simple_form_for @flat do |f| %>
+
+
+    <div class="form-group">
+      <%= f.label :title %>
+      <%= f.text_field :title ,class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :description %>
+      <%= f.text_field :description ,class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :bedroom %>
+      <%= f.text_field :bedroom ,class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :bathroom %>
+      <%= f.text_field :bathroom ,class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :property_type %>
+      <%= f.text_field :property_type ,class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :street %>
+      <%= f.text_field :street ,class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :district %>
+      <%= f.text_field :district ,class: 'form-control' %>
+    </div>
+
+     <div class="form-group">
+      <%= f.label :post_code %>
+      <%= f.text_field :post_code ,class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :city %>
+      <%= f.text_field :city ,class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :rent %>
+      <%= f.text_field :rent ,class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :rent_extra %>
+      <%= f.text_field :rent_extra ,class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :total_rent %>
+      <%= f.text_field :total_rent ,class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :garage %>
+      <%= f.text_field :garage ,class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :level_floor %>
+      <%= f.text_field :level_floor ,class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :floors_number %>
+      <%= f.text_field :floors_number ,class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :vacant_from %>
+      <%= f.text_field :vacant_from ,class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :square_meter %>
+      <%= f.text_field :square_meter ,class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :land %>
+      <%= f.text_field :land ,class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :year_construction %>
+      <%= f.text_field :year_construction ,class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :type_heating %>
+      <%= f.text_field :type_heating ,class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.submit "Save", class: "btn btn-secondary" %>
+    </div>
+
+   <% end %>
+</div>
+
+
+
+
+
