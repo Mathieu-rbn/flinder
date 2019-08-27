@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'flats/show'
+  devise_for :users
+  root to: 'pages#home'
+
+
 
   get 'users/show'
   devise_for :users
