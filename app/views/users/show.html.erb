@@ -1,0 +1,27 @@
+<header class="py-1 bg-image-full" style="background-image: url('https://unsplash.it/1900/1080?image=1076');">
+    <img class="img-fluid d-block mx-auto" src="https://uidesign.gbtcdn.com/gb_blog/author/Steve-Lowry-2.png" alt="">
+</header>
+<section class="py-1">
+  <button type="button" class="btn btn-primary btn-lg btn-block">Send a message</button>
+</section>
+<section class="py-2">
+  <div class= "container">
+    <h1  align="center"><strong>About <%= @user.first_name %> <%= @user.last_name%></strong></h1>
+      <ul>
+        <li>Email: <%= @user.email %></li>
+        <li>Description: <%= @user.profile_description %></li>
+        <li>Profession: <%= @user.profession %></li>
+        <li>Bathroom: <%= @user.bathroom %></li>
+        <li>Bedroom: <%= @user.bedroom %></li>
+        <li>Rooms: <%= @user.bedroom + @user.bathroom %></li>
+      </ul>
+    </div>
+</section>
+<section class="py-5">
+  <h2>Apartment Details</h2>
+  <ul>
+      <% @flats.each do |flat| %>
+        <li><%= flat.street %></li>
+      <% end %>
+    </ul>
+</section>
