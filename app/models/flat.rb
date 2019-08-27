@@ -4,7 +4,14 @@ class Flat < ApplicationRecord
   has_many :matches
   has_many :flat_photos
 
-  #validates :first_name, presence: true
-  #validates :last_name, presence: true
-  #validates :property_type, presence: true
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
+
+  # validates :title, presence: true
+  # validates :description, presence: true
+  # validates :property_type, presence: true
+  # mount_uploader :photo, PhotoUploader
+
 end
+
+
