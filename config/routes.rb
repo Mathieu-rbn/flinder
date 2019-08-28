@@ -1,17 +1,15 @@
 Rails.application.routes.draw do
-  get 'flats/show'
-  devise_for :users
-  root to: 'pages#home'
 
 
-
-  get 'users/show'
   devise_for :users
   root to: 'pages#home'
   get "/profile", to: 'pages#profile'
 
-  resources :flats, only: [:new, :show, :create]
+  resources :flats, only: [:new, :show, :create] do
+    # get "/viewings/new", to: "viewings#new"
+  end
 
   resources :users, only: [:show]
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
