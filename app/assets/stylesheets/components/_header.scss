@@ -4,6 +4,7 @@ element.style {
 
 .bg-image-full {
     background: no-repeat center center scroll;
+    height: 252px;
 }
 
 .pb-5, .py-5 {
@@ -33,5 +34,31 @@ img {
     border-style: none;
 }
 
+/*.masthead {
+  border-bottom: 1px solid #e0e0e0!important;
+  border-top: 1px solid #e0e0e0!important;
+} */
 
+.is24-ex-details .criteriagroup.main-criteria-container {
+    padding-top: 0;
+    padding-bottom: 0;
+    border-top: none;
+}
 
+.is24-ex-details .mainCriteria {
+    margin-bottom: 16px;
+}
+
+.is24-ex-details .mainCriteria {
+    margin-right: 24px;
+}
+
+.is24-ex-details .mainCriteria .is24-value {
+    font-size: 2rem;
+}
+.is24-ex-details .mainCriteria div {
+    line-height: 1.2em;
+}
+.font-semibold {
+    font-weight: 600!important;
+}
