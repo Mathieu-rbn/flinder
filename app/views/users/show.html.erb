@@ -1,0 +1,83 @@
+<header class="py-2 bg-image-full" style="background-image: url('https://unsplash.it/1900/1080?image=1076');" >
+    <img class="img-fluid d-block mx-auto" src="https://uidesign.gbtcdn.com/gb_blog/author/Steve-Lowry-2.png" alt="">
+</header>
+<br>
+<section class="py-2">
+  <div class="py-3 text-center">
+    <div class= "masthead text-white text-center">
+      <button type="button" class="btn btn-primary btn-lg">Send a message</button>
+    </div>
+  </div>
+  <div class= "container">
+    <div class="card p-3 mb-2">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam omnis blanditiis, facilis expedita. Cupiditate dolores quidem corrupti sunt porro pariatur in blanditiis, voluptas ab error itaque ut, enim laboriosam similique?
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="py-1">
+  <div class="container">
+    <% @flats.each do |flat| %>
+    <div class="card p-2 mb-2">
+      <p class="lead"><%= flat.city %>, <%= flat.district %>, <%= flat.street %></p>
+      <h1 class="font-weight-light"> Lorem ipsum dolor sit <%= flat.title %></h1>
+    </div>
+    <div class="card p-3 mb-2">
+      <div class="container d-flex flow-row mb-3">
+        <div class="mainCriteria flex-item"></div>
+          <div class="is24qa-kaltmiete is24-value font-semibold"><p class="mx-1" ><i class="fas fa-home mr-1"></i><%= flat.bathroom + flat.bedroom %></p>
+          </div>
+          <div class="mainCriteria flex-item"></div>
+            <div class="is24qa-kaltmiete is24-value font-semibold"><p class="mx-1" ><i class="fas fa-home mr-1"></i><%= flat.total_rent %></p>
+            </div>
+          </div>
+          <div class="mainCriteria flex-item"></div>
+            <div class="is24qa-kaltmiete is24-value font-semibold"><p class="mx-1" ><i class="fas fa-home mr-1"></i><%= flat.square_meter %> m2</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Flat Description -->
+    <h5 class="collapsed" data-toggle="collapse" href="#collapseOne" >Description</h5>
+    <p class="lead" id="collapseOne" class="collapse" role="tabpanel"><%= flat.description %></p>
+    <!-- Flat Extras -->
+    <h5 class="collapsed" data-toggle="collapse" href="#collapseTwo" >Extras</h5>
+    <div class="container" class="lead" id="collapseTwo" class="collapse" role="tabpanel">
+    <ul>
+      <li>Item 1</li>
+      <li>Item 1</li>
+      <li>Item 1</li>
+      <li>Item 1</li>
+    </ul>
+    <% end %>
+  </div>
+  <!-- Flat Location -->
+  <h5>Flat Location</h5>
+    <div
+      id="map"
+      style="width: 100%;
+      height: 600px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    ></div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="py-5">
+  <h2>Apartment Details</h2>
+  <ul>
+    <% @flats.each do |flat| %>
+      <li><%= flat.street %></li>
+    <% end %>
+  </ul>
+</section>

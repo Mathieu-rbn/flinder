@@ -23,9 +23,11 @@ class FlatsController < ApplicationController
 
   def create
     @flat = Flat.new(flat_params)
-    # @user = current_user
-    # @flat.user = @user
+    @user = current_user
+
+    @flat.user = @user
     @flat.save
+    redirect_to flat_path(@flat)
   end
 
   # def edit

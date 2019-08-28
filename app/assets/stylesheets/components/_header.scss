@@ -1,0 +1,64 @@
+element.style {
+    background-image: url(https://unsplash.it/1900/1080?image=1076);
+}
+
+.bg-image-full {
+    background: no-repeat center center scroll;
+    height: 252px;
+}
+
+.pb-5, .py-5 {
+    padding-bottom: 3rem!important;
+}
+
+.ml-auto, .mx-auto {
+    margin-left: auto!important;
+}
+
+
+.mr-auto, .mx-auto {
+    margin-right: auto!important;
+}
+
+.d-block {
+    display: block!important;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+/*.masthead {
+  border-bottom: 1px solid #e0e0e0!important;
+  border-top: 1px solid #e0e0e0!important;
+} */
+
+.is24-ex-details .criteriagroup.main-criteria-container {
+    padding-top: 0;
+    padding-bottom: 0;
+    border-top: none;
+}
+
+.is24-ex-details .mainCriteria {
+    margin-bottom: 16px;
+}
+
+.is24-ex-details .mainCriteria {
+    margin-right: 24px;
+}
+
+.is24-ex-details .mainCriteria .is24-value {
+    font-size: 2rem;
+}
+.is24-ex-details .mainCriteria div {
+    line-height: 1.2em;
+}
+.font-semibold {
+    font-weight: 600!important;
+}
