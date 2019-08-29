@@ -1,11 +1,10 @@
 class FlatsController < ApplicationController
-
   def show
     @flat = Flat.find(params[:id])
     @markers = [{
-        lat: @flat.latitude,
-        lng: @flat.longitude,
-        infoWindow: render_to_string(partial: 'info_window', locals: { flat: @flat })
+      lat: @flat.latitude,
+      lng: @flat.longitude,
+      infoWindow: render_to_string(partial: 'info_window', locals: { flat: @flat })
     }]
   end
 
@@ -13,13 +12,18 @@ class FlatsController < ApplicationController
     @flat = Flat.new
   end
 
+
   def next
     Flat.next
   end
 
-  # def index
-  #   @flats = Flat.all
-  # end
+ 
+  def index
+    #@flats = Flat.all
+#    @flats = @flats.where("district ILIKE ?", "%#{params[:query]}%") if params[:query].present?
+#    @flats = @flats.where(bedroom: params[:query1].to_i) if params[:query1].present?
+#    @flats = @flats.where("street ILIKE ?", "%#{params[:query2]}%") if params[:query2].present?
+  end
 
   # def show
   #   @flat = Flat.find(params[:id])
