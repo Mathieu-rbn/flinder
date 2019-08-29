@@ -1,3 +1,4 @@
+<div id="swipe_hammer" width="1000"height="1000">
 <%= render "carousel" %>
 <!-- Page Content -->
 <section class="py-5">
@@ -13,7 +14,7 @@
     <h5 class="collapsed" data-toggle="collapse" href="#collapseOne" >Description</h5>
     <p class="lead" id="collapseOne" class="collapse" role="tabpanel"><%= @flat.description %></p>
     <!-- Flat Extras -->
-    <h5 class="collapsed" data-toggle="collapse" href="#collapseTwo" >Extras</h5>
+    <h5 class="swipe" data-toggle="collapse" href="#collapseTwo" >Extras</h5>
     <div class="container" class="lead" id="collapseTwo" class="collapse" role="tabpanel">
     <ul>
       <li>Item 1</li>
@@ -23,7 +24,7 @@
     </ul>
   </div>
   <!-- Flat Location -->
-  <h5>Flat Location</h5>
+  <h5 >Flat Location</h5>
     <div
       id="map"
       style="width: 100%;
@@ -33,4 +34,9 @@
     ></div>
 </section>
 
-<%= link_to "Test", flat_viewings_new_path(@flat) %>
+
+</div>
+
+<% content_for :after_js do  %>
+<%= javascript_pack_tag "swipe" %>
+<% end %>
