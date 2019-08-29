@@ -4,3 +4,4 @@ class Match < ApplicationRecord
 
   validates :asker, uniqueness: { scope: :receiver }
 end
+
