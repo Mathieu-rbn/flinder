@@ -17,8 +17,9 @@ class FlatsController < ApplicationController
     Flat.next
   end
 
- 
+
   def index
+    @flats = Flat.all
     #@flats = Flat.all
 #    @flats = @flats.where("district ILIKE ?", "%#{params[:query]}%") if params[:query].present?
 #    @flats = @flats.where(bedroom: params[:query1].to_i) if params[:query1].present?

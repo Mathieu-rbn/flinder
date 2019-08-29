@@ -1,0 +1,9 @@
+<% @flats.each_with_index do |flat, index| %>
+  <div class="flat-box <%= 'active' if index == 0 %>">
+    <h4><%= flat.title %></h4>
+    <div class="d-flex">
+      <button class="btn btn-danger">NO</button>
+      <button class="btn-success btn like-btn" data-flat-id=<%= flat.id %>>LIKE</button>
+    </div>
+  </div>
+<% end %>
