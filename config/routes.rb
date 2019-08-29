@@ -4,11 +4,9 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get "/profile", to: 'pages#profile'
 
-  resources :flats, only: [:new, :show, :create] do
+  resources :flats, only: [:index, :new, :show, :create] do
     resources :viewings,  only: [:new]
   end
-
-
 
   resources :users do
     resources :flats, only: [:show]

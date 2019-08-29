@@ -25,10 +25,6 @@ class FlatsController < ApplicationController
 #    @flats = @flats.where("street ILIKE ?", "%#{params[:query2]}%") if params[:query2].present?
   end
 
-  # def show
-  #   @flat = Flat.find(params[:id])
-  # end
-
   def create
     @flat = Flat.new(flat_params)
     @user = current_user
