@@ -4,6 +4,10 @@ class ViewingsController < ApplicationController
     @flats = Flat.all #change it if flats are filtered
     index = @flats.index(@viewing.flat)
     next_flat = @flats[index + 1]
-    redirect_to flat_path(next_flat)
+    if next_flat
+      redirect_to flat_path(next_flat)
+    else
+      redirect_to root_path
+    end
   end
 end
