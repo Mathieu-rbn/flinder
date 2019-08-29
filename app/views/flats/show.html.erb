@@ -1,4 +1,8 @@
 <div class="flat_card">
+  <div class="container d-flex justify-content-end">
+    <%= link_to "Dislike", new_flat_viewing_path(@flat, like: false), class: "btn btn-danger" %>
+    <%= link_to "Like", new_flat_viewing_path(@flat, like: true), class: "btn btn-primary" %>
+    </div>
   <%= render "carousel" %>
   <!-- Page Content -->
   <section class="py-5">

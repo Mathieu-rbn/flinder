@@ -18,10 +18,17 @@ const initHammer = () => {
 
   // Subscribe to the event.
   manager.on('pan', function(e) {
+    // console.log(e.direction);
+    if ((e.direction === 2) && (e.deltaX <= -250)) {
+      console.log("left");
+    }
+    else if (e.direction === 4)  {
+     console.log("rechts");
+    }
     const percentage = 100 / slideCount * e.deltaX / window.innerWidth; // NEW: our % calc
     flat_card.style.transform = 'translateX(' + percentage + '%)'; // NEW: our CSS transform
-    console.log("You're panning me!");
-    console.log(e);
+    //console.log("You're panning me!");
+    //console.log(e);
   });
 }
 
