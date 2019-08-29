@@ -30,6 +30,7 @@ class FlatsController < ApplicationController
     @flat.user = @user
     @flat.save
     redirect_to flat_path(@flat)
+    # redirect_to new_flat_path
   end
 
   # def edit
@@ -47,6 +48,6 @@ class FlatsController < ApplicationController
     params.require(:flat).permit(:title, :description, :bathroom, :bedroom, :property_type, :street,
                                  :district, :post_code, :city, :price, :content, :total_rent,
                                  :garage, :level_floor, :floors_number, :vacant_from, :square_meter,
-                                 :land, :year_construction, :type_heating, :extra, :radius)
+                                 :land, :year_construction, :type_heating, :elevator, :photo)
   end
 end

@@ -11,7 +11,5 @@ class Flat < ApplicationRecord
   # validates :description, presence: true
   # validates :property_type, presence: true
   # mount_uploader :photo, PhotoUploader
-
 end
-
 
