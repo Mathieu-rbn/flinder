@@ -13,6 +13,10 @@ class FlatsController < ApplicationController
     @flat = Flat.new
   end
 
+  def next
+    Flat.next
+  end
+
   # def index
   #   @flats = Flat.all
   # end
