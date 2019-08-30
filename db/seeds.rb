@@ -5,6 +5,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
 Viewing.destroy_all
  puts "destroy all users"
 
@@ -128,5 +129,3 @@ Viewing.create!(user:u2, flat:f4, like:false)
 # Kastanienallee 82, 10435 Berlin
 # Kollwitzstraße 37, 10405 Berlin
 # Fehrbelliner Str. 17, 10119 Berlin
-
-

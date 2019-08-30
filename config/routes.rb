@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get "/profile", to: 'pages#profile'
 
+ get "/matches", to: "matches#index"
   resources :flats, only: [:index, :new, :show, :create] do
     resources :viewings,  only: [:new]
   end
@@ -11,4 +12,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :new, :show, :create]  do
     resources :flats, only: [:show]
   end
+
+  resources :matches, only: [:show]
+
 end
