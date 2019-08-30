@@ -1,14 +1,16 @@
 <div class="container w-50">
+  <div class="row">
+    <div class="col">
 <%= simple_form_for @flat do |f| %>
-  <h2>ADD YOUR FLAT</h2>
-    <h3>Location</h3>
+  <h4>ADDING FLAT</h4>
+    <h5>Location</h5>
   <%= f.input :address, placeholder:'type your address'  %>
   <%= f.input :street  %>
   <%= f.input :post_code, placeholder: 'add your postcode' %>
   <%= f.input :city, as: :radio_buttons, collection: ['Berlin', 'London', 'Paris', 'Amsterdam'] %>
   <%= f.input :district, as: :radio_buttons, collection: ['Mitte', 'Charlottenburg', 'Kreuzberg','Prenzlaeur Berg', 'Schöneberg', 'Friedrichshain', 'Wilmesdorf', 'Neukölln','Tiergarten', 'Steglitz', 'Friedenau'],hint: 'Kreuzberg, Neukölln' %>
 
-  <h3>House details</h3>
+  <h5>House details</h5>
   <%= f.input :property_type,as: :radio_buttons, collection: ['House', 'Flat'], selected: 'Flat'  %>
   <%= f.input :bathroom, as: :radio_buttons, collection: 1..3, selected: 1   %>
   <%= f.input :bedroom, as: :radio_buttons, collection: ['1','2','3','4','5','6+']   %>
@@ -28,16 +30,18 @@
   <%= f.input :elevator, as: :boolean %>
   <%= f.input :furnished, as: :boolean %> -->
 
-  <h3>Price</h3>
+  <h5>Price</h5>
   <%= f.input :rent, as: :decimal %>
 <!--   <%= f.input :radius, as: :range , hint: 'just for test, will be deleted' %> -->
 
-  <h3>Photos</h3>
+  <h5>Photos</h5>
   <%= f.input :photo, as: :file, hint: 'Upload your home picture' %>
   <%= f.submit "Save", class: "btn btn-secondary" %>
 
 <% end %>
 
+    </div>
+  </div>
 </div>
 
 <!-- PSEUDO CODE
