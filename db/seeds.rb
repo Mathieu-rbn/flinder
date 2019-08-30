@@ -5,14 +5,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Viewing.destroy_all
+ puts "destroy all users"
+
 Flat.destroy_all
 puts "destroy all flats"
 
 User.destroy_all
  puts "destroy all users"
-
-# Viewing.destroy_all
-#  puts "destroy all users"
 
 # USERS
 u1 = User.create!(first_name: "John", last_name: "Doe", email: "test1@example.com",
@@ -103,25 +103,25 @@ year_construction: "1945-1960",square_meter: 55, title: "Unique flat in central 
 vacant_from:"2019/10/1",rent:950, user_id:u10.id, photo: "https://res.cloudinary.com/mathieurobin1/image/upload/v1567084950/Flinder/Flat_5_Mitte_bgwwbr.jpg")
 puts "flats created"
 
-#need to mention that user_id u1 has the flat
+# need to mention that user_id u1 has the flat
 # u1 like the flat f2 who belongs to u2
 # u2 like the flat f7 who belongs to u1
-#
+
 # u1 = 1 family guy , 1 kid, want a bigger flat in Prenzlaeur Berg, 2 bedrooms
 # u2 = 1 60 years old, current flat 2 bedroom, too big and expensive, want a 1 bedroom flat
 # u1(f2) match with u2(f7)
 
-# Viewing.create!(user_id:u1, flat_id:f6, like:false)
-# Viewing.create!(user_id:u1, flat_id:f7, like:false)
-# Viewing.create!(user_id:u1, flat_id:f2, like:true)
-# Viewing.create!(user_id:u1, flat_id:f8, like:false)
-# Viewing.create!(user_id:u1, flat_id:f1, like:false)
+Viewing.create!(user:u1, flat:f6, like:false)
+Viewing.create!(user:u1, flat:f7, like:false)
+Viewing.create!(user:u1, flat:f2, like:true)
+Viewing.create!(user:u1, flat:f8, like:false)
+Viewing.create!(user:u1, flat:f1, like:false)
 
-# Viewing.create!(user_id:u2, flat_id:f1, like:false)
-# Viewing.create!(user_id:u2, flat_id:f2, like:false)
-# Viewing.create!(user_id:u2, flat_id:f7, like:true)
-# Viewing.create!(user_id:u2, flat_id:f3, like:false)
-# Viewing.create!(user_id:u2, flat_id:f4, like:false)
+Viewing.create!(user:u2, flat:f1, like:false)
+Viewing.create!(user:u2, flat:f2, like:false)
+Viewing.create!(user:u2, flat:f7, like:true)
+Viewing.create!(user:u2, flat:f3, like:false)
+Viewing.create!(user:u2, flat:f4, like:false)
 
 # Danziger Str. 60, 10435 Berlin
 # Sredzkistraße 43, 10435 Berlin
