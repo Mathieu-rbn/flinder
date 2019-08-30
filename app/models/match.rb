@@ -12,3 +12,4 @@ class Match < ApplicationRecord
     end
   end
 end
+

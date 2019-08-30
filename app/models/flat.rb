@@ -8,6 +8,10 @@ class Flat < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
+  def next
+    # self.flats.where("id > ?").first
+  end
+
   # validates :title, presence: true
   # validates :description, presence: true
   # validates :property_type, presence: true

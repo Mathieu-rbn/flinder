@@ -1,0 +1,77 @@
+<div class="container w-50">
+  <div class="row">
+    <div class="col">
+<%= simple_form_for @user do |f| %>
+
+  <H2>My profile</h2>
+    <%= f.input :first_name, placeholder:'First Name'  %>
+    <%= f.input :last_name, placeholder:'Last Name'  %>
+    <%= f.input :email, placeholder:'Email'  %>
+    <%= f.input :password, placeholder:'password'  %>
+    <%= f.input :mobile, placeholder:'mobile'  %>
+
+  <H2>Photos</h2>
+  <%= f.input :photo, as: :file, hint: 'Upload your home picture' %>
+
+  <H2>My preferences</h2>
+    <%= f.input :district, as: :check_boxes, collection: ['Mitte', 'Charlottenburg', 'Kreuzberg','Prenzlaeur Berg', 'Schöneberg', 'Friedrichshain', 'Wilmesdorf', 'Neukölln','Tiergarten', 'Steglitz', 'Friedenau'],hint: 'Kreuzberg, Neukölln' %>
+
+    <%= f.input :street  %>
+    <%= f.input :post_code, placeholder: 'add your postcode' %>
+    <%= f.input :city, as: :radio_buttons, collection: ['Berlin', 'London', 'Paris', 'Amsterdam'] %>
+
+    <%= f.input :total_rent, as: :decimal %>
+    <%= f.input :property_type,as: :radio_buttons, collection: ['House', 'Flat'], selected: 'Flat'  %>
+    <%= f.input :square_meter, as: :integer %>
+    <%= f.input :bathroom, as: :radio_buttons, collection: 1..3, selected: 1   %>
+    <%= f.input :bedroom, as: :radio_buttons, collection: ['1','2','3','4','5','6+']   %>
+    <%= f.input :type_heating, as: :radio_buttons, collection: ['Central heating', 'Gaz', 'Electricity'] %>
+    <%= f.input :year_construction, as: :check_boxes, collection: ['before 1900','1900-1945','1945-1960','1960-1990','1990-2019'] %>
+    <%= f.input :vacant_from, as: :date %>
+
+  <H2>Price</h2>
+    <%= f.input :total_rent, as: :decimal %>
+    <%= f.submit "Save", class: "btn btn-secondary" %>
+
+  <% end %>
+    </div>
+  </div>
+</div>
+
+<!-- PSEUDO CODE
+1) Get the list of all datas required from schema / DB
+2) Sort the list by type of data
+3) Get simple form information and install it on the project
+4) Make the formating according to design choice ???
+5) Make the list of restricted choices (Cities, Districts, Property time, Bedroom, Bathroom, Type Heating, Level Floor, Floors number)
+
+6) Test the design on Mobile view in the browser
+7) Split the information in 2, 3 pages if needed => Deliveroo style is good also
+8) Define which information goes where
+9) Limit (min/max) characters number for some fields (title / description)
+10) Title, limit to 30 characters
+
+11) Description, limit to 145 characters
+12) Update the database (+ Furnished, + Elevator, - extra, - radius)
+13) Push to Github
+14) Push to Heroku and check on Mobile
+15) Create a visual element to confirm the user of missing/mandatory/optional information ??? => setup should be done directly in the code below
+16) Bootstrap manage automatically the error messages
+17) Total rent = rent + rent extra ??? not critical now
+ -->
+<!-- Other tasks
+1) Create the button to go to the next page ? Swipping?
+2) Change the language of simple form to avoid to have button in non-english languages
+3) Square meter should be integer not floating
+4) Fix the form date_picker
+5) Personalized the pictures
+ -->
+<!--
+  <div class="form-group">
+    <label for="exampleInputName">Name</label>
+    <input type="text" class="form-control" id="exampleInputName" placeholder="Your name" required>
+    <div class="invalid-feedback">Name can't be blank</div>
+    <div class="valid-feedback">Looks good!</div>
+    <small class="form-text text-muted">Text input example</small>
+  </div>
+   -->
