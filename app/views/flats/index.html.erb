@@ -2,18 +2,21 @@
 <% @flats.each_with_index do |flat, index| %>
   <div class="flat-box <%= 'active' if index == 0 %> ">
     <%= render "carousel" %>
-    <p class="text-center"><small class="text-muted"> <%= flat.address %></p></small>
     <h4 class="text-center"><%= flat.title %></h4>
-    <div class="container d-flex flow-row mb-3 ">
-      <p class="mx-1" ><i class="fas fa-home mr-1"></i><%= flat.bedroom + 1 %></p>
-      <p class="mx-1" ><i class="fas fa-home mr-1"></i><%= flat.total_rent %></p>
+    <p class="text-center"><small class="text-muted"> <%= flat.address %></p></small>
+    <div class="container d-flex justify-content-around flow-row mb-3 ">
+      <p class="mx-1" ><i class="fas fa-door-open mr-1"></i><%= flat.bedroom + 1 %></p>
+      <p class="mx-1" ><i class="fas fa-euro-sign mr-1"></i><%= flat.rent %></p>
       <p class="mx-1" ><i class="fas fa-home mr-1"></i><%= flat.square_meter %></p>
+      <p class="mx-1" ><i class="fas fa-ticket-alt mr-1"></i><%= flat.vacant_from %></p>
     </div>
-    <div class="d-flex justify-content-end">
-      <button class="btn btn-danger">NO</button>
-      <button class="btn-success btn like-btn" data-user-id=<%= flat.user_id %>, data-flat-id=<%= flat.id %> >LIKE</button>
+    <div class="d-flex justify-content-center">
+      <%= link_to 'no', flat_viewings_path(flat, viewing: {like: false}), method: :post, remote: true, class: "btn-danger btn like-btn btn-lg rounded", "data-flat-id" => flat.id %>
+      <%= link_to 'yes', flat_viewings_path(flat, viewing: {like: true}), method: :post, remote: true, class: "btn-success btn like-btn btn-lg rounded", "data-flat-id" => flat.id %>
     </div>
+    <div class="container mt-5 d-flex justify-content-center">
       <%= link_to "More Information", flat_path(flat) %>
+    </div>
   </div>
 <% end %>
 </div>
