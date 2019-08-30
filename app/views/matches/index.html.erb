@@ -3,9 +3,10 @@
 <br>
 <% @matches.each do |match| %>
 <div class="card-product">
-  <img src="https://images.unsplash.com/photo-1463741408080-b210ee5227dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1363&q=80" />
+  <% flat = match.other_party(current_user.flat) %>
+  <img src=<%= flat.photo%> />
   <div class="card-product-infos">
-    <% flat = match.other_party(current_user.flat) %>
+
     <h2><strong><%= flat.id%> <%= flat.street %> - <%= flat.post_code %> <%= flat.district %></strong></h2>
     <p><%= flat.description %> in <%= flat.district %> </p>
   </div>
