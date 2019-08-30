@@ -1,0 +1,17 @@
+
+<h1>Your matches</h1>
+<br>
+<% @matches.each do |match| %>
+<div class="card-product">
+  <img src="https://images.unsplash.com/photo-1463741408080-b210ee5227dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1363&q=80" />
+  <div class="card-product-infos">
+    <h2><strong><%= match.other_party(current_user.flat).id%> <%= match.other_party(current_user.flat).street %> - <%= match.other_party(current_user.flat).post_code %> <%= match.other_party(current_user.flat).district %></strong></h2>
+    <p><%= match.other_party(current_user.flat).description %> in <%= match.other_party(current_user.flat).district %> </p>
+  </div>
+  <div class="btn-group btn-group-sm d-flex align-items-end" role="group" aria-label="Basic example">
+  <%= link_to "See more", match_path(match.other_party(current_user.flat)), class: "btn btn-danger btn-block btn-sm mt-2" %>
+  </div>
+</div>
+<br>
+<% end %>
+
