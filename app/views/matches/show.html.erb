@@ -7,11 +7,12 @@
     <div class= "masthead text-white text-center">
       <button type="button" class="btn btn-primary btn-lg">Send a message</button>
     </div>
+    <p>@flat.</p>
   </div>
   <div class= "container">
     <div class="card p-3 mb-2">
       <p>
-        <%= @flat.description%>
+        <%= @flat.title%>
       </p>
     </div>
   </div>
@@ -23,7 +24,7 @@
   <div class="container">
     <div class="card p-2 mb-2">
       <p class="lead"><%= @flat.id%> <%= @flat.city%>, <%= @flat.district%>, <%= @flat.street%></p>
-      <h1 class="font-weight-light"> Lorem ipsum dolor sit <%= @flat.title%></h1>
+      <h1 class="font-weight-light"> <%= @flat.description%></h1>
     </div>
     <div class="card p-3 mb-2">
       <div class="container d-flex flow-row mb-3">
