@@ -7,8 +7,6 @@ class Viewing < ApplicationRecord
 
   private
 
-
-
   def check_matching
     MatcherService.check(self)
   end
