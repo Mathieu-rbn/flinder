@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get "/profile", to: 'pages#profile'
 
   resources :flats, only: [:index, :new, :show, :create] do
-    resources :viewings,  only: [:new]
+    resources :viewings,  only: [:create]
   end
 
   resources :users do
