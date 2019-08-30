@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :viewings,  only: [:new]
   end
 
-  resources :users do
+  resources :users, only: [:index, :new, :show, :create]  do
     resources :flats, only: [:show]
   end
 end

@@ -1,22 +1,22 @@
 <div class="container w-50">
 <%= simple_form_for @flat do |f| %>
-  <H1>ADD YOUR FLAT</h1>
-    <H2>Location</h2>
+  <h2>ADD YOUR FLAT</h2>
+    <h3>Location</h3>
   <%= f.input :address, placeholder:'type your address'  %>
   <%= f.input :street  %>
   <%= f.input :post_code, placeholder: 'add your postcode' %>
   <%= f.input :city, as: :radio_buttons, collection: ['Berlin', 'London', 'Paris', 'Amsterdam'] %>
   <%= f.input :district, as: :radio_buttons, collection: ['Mitte', 'Charlottenburg', 'Kreuzberg','Prenzlaeur Berg', 'Schöneberg', 'Friedrichshain', 'Wilmesdorf', 'Neukölln','Tiergarten', 'Steglitz', 'Friedenau'],hint: 'Kreuzberg, Neukölln' %>
 
-  <H2>House details</h2>
+  <h3>House details</h3>
   <%= f.input :property_type,as: :radio_buttons, collection: ['House', 'Flat'], selected: 'Flat'  %>
   <%= f.input :bathroom, as: :radio_buttons, collection: 1..3, selected: 1   %>
   <%= f.input :bedroom, as: :radio_buttons, collection: ['1','2','3','4','5','6+']   %>
   <%= f.input :type_heating, as: :radio_buttons, collection: ['Central heating', 'Gaz', 'Electricity'] %>
   <%= f.input :year_construction, as: :radio_buttons, collection: ['before 1900','1900-1945','1945-1960','1960-1990','1990-2019']   %>
   <%= f.input :square_meter, as: :integer %>
-  <%= f.input :title, hint: 'maximum 45 characters', placeholder: 'Beautiful flat in the heart of Kreuzberg', maxlength: 50 %>
-  <%= f.input :description, hint: 'maximum 145 characters', placeholder: 'Add a short description of your flat', minlength: 80, maxlength: 290 %>
+  <%= f.input :title, hint: 'maximum 50 characters', placeholder: 'Beautiful flat in the heart of Kreuzberg', maxlength: 50 %>
+  <%= f.input :description, hint: 'maximum 290 characters', placeholder: 'Add a short description of your flat', minlength: 80, maxlength: 290 %>
   <%= f.input :vacant_from, as: :date %>
 <!--   <%= f.input :vacant_from, as: :string, input_html: {class: 'form_datepicker'} %> -->
 
@@ -28,11 +28,11 @@
   <%= f.input :elevator, as: :boolean %>
   <%= f.input :furnished, as: :boolean %> -->
 
-  <H2>Price</h2>
+  <h3>Price</h3>
   <%= f.input :rent, as: :decimal %>
 <!--   <%= f.input :radius, as: :range , hint: 'just for test, will be deleted' %> -->
 
-  <H2>Photos</h2>
+  <h3>Photos</h3>
   <%= f.input :photo, as: :file, hint: 'Upload your home picture' %>
   <%= f.submit "Save", class: "btn btn-secondary" %>
 
