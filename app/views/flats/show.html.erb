@@ -1,19 +1,4 @@
 <div class="flat_card">
-  <div class="container d-flex justify-content-end">
-    <%= link_to "Dislike", new_flat_viewing_path(@flat, like: false), class: "btn btn-danger" %>
-    <%= link_to "Like", new_flat_viewing_path(@flat, like: true), class: "btn btn-primary" %>
-    </div>
-  <%= render "carousel" %>
-  <!-- Page Content -->
-  <section class="py-5">
-    <div class="container">
-      <p class="lead"><%= @flat.city %>, <%= @flat.district %>, <%= @flat.street %></p>
-      <h1 class="font-weight-light"><%= @flat.title %></h1>
-      <div class="container d-flex flow-row mb-3">
-        <p class="mx-1" ><i class="fas fa-home mr-1"></i>Number of Rooms</p>
-        <p class="mx-1" ><i class="fas fa-home mr-1"></i>Rent per Month</p>
-        <p class="mx-1" ><i class="fas fa-home mr-1"></i>Squaremeters</p>
-      </div>
       <!-- Flat Description -->
       <h5 class="collapsed" data-toggle="collapse" href="#collapseOne" >Description</h5>
       <p class="lead" id="collapseOne" class="collapse" role="tabpanel"><%= @flat.description %></p>
