@@ -12,10 +12,10 @@ class FlatsController < ApplicationController
     @flat = Flat.new
   end
 
-
   def next
     Flat.next
   end
+
 
 
   def index
@@ -25,6 +25,7 @@ class FlatsController < ApplicationController
 #    @flats = @flats.where(bedroom: params[:query1].to_i) if params[:query1].present?
 #    @flats = @flats.where("street ILIKE ?", "%#{params[:query2]}%") if params[:query2].present?
   end
+
 
   def create
     @flat = Flat.new(flat_params)
