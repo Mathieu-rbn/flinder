@@ -11,31 +11,31 @@
   <div class= "container">
     <div class="card p-3 mb-2">
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam omnis blanditiis, facilis expedita. Cupiditate dolores quidem corrupti sunt porro pariatur in blanditiis, voluptas ab error itaque ut, enim laboriosam similique?
+        <%= @flat.description%>
       </p>
     </div>
   </div>
 </section>
-<p><%#= @match.other_party(current_user.flat).title%></p>
-<p><%#= @match.other_party(current_user.flat).user_id%></p>
+<p><%#= @flat.title%></p>
+<p><%#= @flat.user_id%></p>
 
 <section class="py-1">
   <div class="container">
     <div class="card p-2 mb-2">
-      <p class="lead"><%= @match.other_party(current_user.flat).id%> <%= @match.other_party(current_user.flat).city%>, <%= @match.other_party(current_user.flat).district%>, <%= @match.other_party(current_user.flat).street%></p>
-      <h1 class="font-weight-light"> Lorem ipsum dolor sit <%= @match.other_party(current_user.flat).title%></h1>
+      <p class="lead"><%= @flat.id%> <%= @flat.city%>, <%= @flat.district%>, <%= @flat.street%></p>
+      <h1 class="font-weight-light"> Lorem ipsum dolor sit <%= @flat.title%></h1>
     </div>
     <div class="card p-3 mb-2">
       <div class="container d-flex flow-row mb-3">
         <div class="mainCriteria flex-item"></div>
-          <div class="is24qa-kaltmiete is24-value font-semibold"><p class="mx-1" ><i class="fas fa-home mr-1"></i><%= @match.other_party(current_user.flat).title%></p>
+          <div class="is24qa-kaltmiete is24-value font-semibold"><p class="mx-1" ><i class="fas fa-home mr-1"></i><%= @flat.title%></p>
           </div>
           <div class="mainCriteria flex-item"></div>
-            <div class="is24qa-kaltmiete is24-value font-semibold"><p class="mx-1" ><i class="fas fa-home mr-1"></i><%= @match.other_party(current_user.flat).total_rent%></p>
+            <div class="is24qa-kaltmiete is24-value font-semibold"><p class="mx-1" ><i class="fas fa-home mr-1"></i><%= @flat.total_rent%></p>
             </div>
           </div>
           <div class="mainCriteria flex-item"></div>
-            <div class="is24qa-kaltmiete is24-value font-semibold"><p class="mx-1" ><i class="fas fa-home mr-1"></i><%= @match.other_party(current_user.flat).square_meter%> m2</p>
+            <div class="is24qa-kaltmiete is24-value font-semibold"><p class="mx-1" ><i class="fas fa-home mr-1"></i><%= @flat.square_meter%> m2</p>
             </div>
           </div>
         </div>
