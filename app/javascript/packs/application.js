@@ -15,10 +15,5 @@ buttons.forEach((btn) => {
     document.querySelector('.flat-box.active').remove();
     document.querySelectorAll('.flat-box')[0].classList.add('active');
     const flatId = event.currentTarget.dataset.flatId;
-    console.log(flatId);
-    console.log (userId);
-    // Call backend to create a viewing
-    // fetch
-    // => /flats/:id/viewings/new
   })
 })

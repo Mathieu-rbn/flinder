@@ -4,7 +4,7 @@ class ViewingsController < ApplicationController
     @flat = Flat.find(params[:flat_id])
     @viewing.flat = @flat
     @viewing.user = current_user
-    if @viewing.save!
+    if @viewing.save
       redirect_to flat_path @flat
     end
   end
