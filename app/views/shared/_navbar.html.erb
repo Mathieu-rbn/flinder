@@ -1,38 +1,62 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to root_path, class: "navbar-brand" do %>
-    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-    <% end %>
+<div class="nav" data-uk-sticky="cls-active: uk-background-default uk-box-shadow-medium; top: 100vh; animation: uk-animation-slide-top">
+  <div class="uk-container">
+    <nav class="uk-navbar uk-navbar-container uk-navbar-transparent" data-uk-navbar>
+      <div class="uk-navbar-left">
+        <div class="uk-navbar-item uk-padding-remove-horizontal">
+          <a class="uk-logo" title="Logo" href="/"> <img src="http://www.theflindersstreetproject.com.au/wp-content/uploads/2016/03/FSP-Logo-wide.png" alt="Logo"></a>
+        </div>
+      </div>
+      <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav uk-visible@s">
+          <li class="uk-active uk-visible@m"><a href="" data-uk-icon="home"></a></li>
+            <a href="#" data-uk-icon="chevron-down">Products</a>
+            <div class="uk-navbar-dropdown">
+              <ul class="uk-nav uk-navbar-dropdown-nav">
+                <li><%= link_to "Home", root_path%></li>
+                <li><%= link_to "Your matches", matches_path%></li>
+                <li><%= link_to "Find new home", flats_path%></li>
+                <li><%= link_to "Add current home", new_flat_path%></li>
+                <li><%= link_to "Profile / preferences", new_user_path(@user)%></li>
+                <li> <%= link_to "Log out", destroy_user_session_path, method: :delete%></li>
+                <li><%= link_to "Login", new_user_session_path%></li>
+              </ul>
+            </div>
+        </ul>
+        <a class="uk-navbar-toggle uk-navbar-item uk-hidden@s" data-uk-toggle data-uk-navbar-toggle-icon href="#offcanvas-nav"></a>
+      </div>
+    </nav>
+  </div>
+</div>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <% if user_signed_in? %>
-        <li class="nav-item active">
-          <%= link_to "Home", root_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item active">
-          <%= link_to "View listings", flats_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item active">
-          <%= link_to "Register my home", new_flat_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item active">
-          <%= link_to "Profile / preferences", new_user_path(@user), class: "nav-link" %>
-        </li>
-        <li class="nav-item active">
-          <%= link_to "Matches", matches_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item active">
-          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
-        </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
-      <% end %>
+<div id="offcanvas-nav" data-uk-offcanvas="flip: true; overlay: false">
+  <div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-slide">
+    <button class="uk-offcanvas-close uk-close uk-icon" type="button" data-uk-close></button>
+    <ul class="uk-nav uk-nav-default">
+     <li> <%= link_to root_path do %>
+           <span uk-icon="home"></span> Home
+       <% end %></li>
+      <li><%= link_to matches_path do %>
+            <span uk-icon="heart"></span> Your matches
+        <% end %></li>
+      <li><%= link_to flats_path do %>
+            <span uk-icon="search"></span> Find new home
+        <% end %></li>
+      <li><%= link_to new_flat_path do %>
+           <span uk-icon="plus-circle"></span> Find new home
+       <% end %></li>
+      <li><%= link_to new_user_path(@user) do %>
+            <span uk-icon="user"></span> Profile & Preferences
+        <% end %></li>
+      <% if current_user.nil? %>
+      <li><%= link_to new_user_session_path do %>
+            <span uk-icon="sign-in"></span> sign-in
+        <% end %></li>
+        <% end %>
+        <% if user_signed_in? %>
+      <li><%= link_to destroy_user_session_path, method: :delete do %>
+            <span uk-icon="sign-out"></span> sign-out
+        <% end %></li>
+        <% end %>
     </ul>
   </div>
 </div>

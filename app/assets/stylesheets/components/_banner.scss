@@ -1,7 +1,7 @@
 /* landing page */
 
 .home-banner-area {
-    background: url("https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=654&q=80") no-repeat top center;
+    background: url("https://images.unsplash.com/photo-1496098868818-75736fc02eeb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=633&q=80") no-repeat top center;
     background-size: cover;
 }
 
@@ -9,8 +9,9 @@
     box-sizing: border-box;
 }
 
-.container {
+.container-banner {
     width: 100%;
+
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
