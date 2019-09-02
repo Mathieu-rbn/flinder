@@ -16,14 +16,29 @@ class FlatsController < ApplicationController
     Flat.next
   end
 
-
-
   def index
+    #@flats = Flat.where(district: current_user.district)
+#    .or(Flat.where(bathroom: current_user.bathroom)
+#      .or(Flat.where(bathroom: current_user.bathroom)
+#        .or(Flat.where(bathroom: current_user.bathroom)
+#          .or(Flat.where(bathroom: current_user.bathroom)
+#            .or(Flat.where(bathroom: current_user.bathroom))))))
+
     @flats = Flat.all
+    @flats = @flats.where(district: current_user.district)
+    @flats = @flats.where(bathroom: current_user.bathroom)
+    .or(@flats.where(bedroom: current_user.bedroom)
+      .or(@flats.where(type_heating: current_user.type_heating)))
+
+    #@flats = @flats.where(bedroom: current_user.bedroom)
+
+    #@flats = @flats.where(type_heating: current_user.type_heating)
+
+  # raise
     #@flats = Flat.all
-#    @flats = @flats.where("district ILIKE ?", "%#{params[:query]}%") if params[:query].present?
-#    @flats = @flats.where(bedroom: params[:query1].to_i) if params[:query1].present?
-#    @flats = @flats.where("street ILIKE ?", "%#{params[:query2]}%") if params[:query2].present?
+    #@flats = @flats.where("district ILIKE ?", "%#{params[:query]}%") if params[:query].present?
+#   @flats = @flats.where(bedroom: params[:query1].to_i) if params[:query1].present?
+#   @flats = @flats.where("street ILIKE ?", "%#{params[:query2]}%") if params[:query2].present?
   end
 
 
