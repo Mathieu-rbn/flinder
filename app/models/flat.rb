@@ -10,10 +10,16 @@ class Flat < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
-  def next
-    # self.flats.where("id > ?").first
-  end
+  def self.flat_query(user)
+    viewed_flats = user.viewings.pluck(:flat_id)
+    @flats = Flat.where.not(id: viewed_flats)
+    @flats = @flats.where(district: user.district)
+    @flats = @flats.where(bathroom: user.bathroom)
+    .or(@flats.where(bedroom: user.bedroom)
+    .or(@flats.where(type_heating: user.type_heating)))
 
+    return @flats.uniq
+  end
   # validates :title, presence: true
   # validates :description, presence: true
   # validates :property_type, presence: true
@@ -23,4 +29,3 @@ class Flat < ApplicationRecord
     received_matches + asked_matches
   end
 end
-

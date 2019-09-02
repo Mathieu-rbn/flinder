@@ -1,3 +1,4 @@
+<% flats.each_with_index do |flat, index| %>
 <div class="uk-card uk-card-default uk-width-1-2@m uk-box-shadow-small flat-box <%= 'active' if index == 0 %>">
     <div class="uk-card-media-top uk-border-rounded">
       <img data-src="https://images.unsplash.com/photo-1470619681920-17fd5fd2f094?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" width="400" height="500" alt="" class="uk-border-rounded" uk-img >
@@ -27,3 +28,4 @@
       <div class="uk-card-footer">
      </div>
  </div>
+<% end %>

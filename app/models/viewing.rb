@@ -8,7 +8,7 @@ class Viewing < ApplicationRecord
 
   after_save :check_matching, if: :like?
 
-  def is_matched?
+  def matched?
     @is_matched
   end
 
@@ -19,5 +19,3 @@ class Viewing < ApplicationRecord
     @is_matched = true if matched == 1
   end
 end
-
-
