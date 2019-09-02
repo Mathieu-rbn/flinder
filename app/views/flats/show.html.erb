@@ -1,29 +1,39 @@
-<div class="container">
+<div class="uk-card uk-card-default uk-card-body uk-width-1-2@m uk-border-rounded">
   <div class="flat_card">
         <%= link_to "Back", flats_path %>
         <!-- Flat Description -->
-        <h5 class="collapsed" data-toggle="collapse" href="#collapseOne" >Description</h5>
-        <p class="lead" id="collapseOne" class="collapse" role="tabpanel"><%= @flat.description %></p>
+        <%= link_to flats_path do %>
+            <span uk-icon="chevron-left" class="uk-margin-remove"></span> Back
+        <% end %>
+        <hr class="uk-divider-icon uk-margin-remove uk-text-meta ">
+        <dl class="uk-description-list">
+            <dt class="uk-text">Description</dt>
+            <dd class="uk-dropcap"><%= @flat.description %></dd>
+        </dl>
         <!-- Flat Extras -->
-        <h5 class="collapsed" data-toggle="collapse" href="#collapseTwo" >Extras</h5>
-        <div class="container d-flex flex-wrap mb-3 ">
-              <p class="mx-1" ><i class="fas fa-bed mr-1"></i><%= @flat.bedroom%></p>
-              <p class="mx-1" ><i class="fas fa-bath mr-1"></i><%= @flat.bathroom%></p>
-              <p class="mx-1" ><i class="fas fa-euro-sign mr-1"></i><%= @flat.rent %></p>
-              <p class="mx-1" ><i class="fas fa-burn mr-1"></i><%= @flat.type_heating %></p>
-              <p class="mx-1" ><i class="fas fa-ticket-alt mr-1"></i><%= @flat.vacant_from %></p>
-              <p class="mx-1" ><i class="fas fa-home mr-1"></i><%= @flat.square_meter %></p>
-            </div>
+        <hr class="uk-divider-icon">
+        <dl class="uk-description-list">
+          <dt class="uk-flex">Features</dt>
+            <p class="mx-1" ><i class="fas fa-bed mr-1"></i><%= @flat.bedroom%></p>
+            <p class="mx-1" ><i class="fas fa-bath mr-1"></i><%= @flat.bathroom%></p>
+            <p class="mx-1" ><i class="fas fa-burn mr-1"></i><%= @flat.type_heating %></p>
+            <p class="mx-1" ><i class="fas fa-home mr-1"></i><%= @flat.square_meter %></p>
+          </dl>
+      <hr class="uk-divider-icon">
+
       <!-- Flat Location -->
-      <h5>Flat Location</h5>
+      <dl class="uk-description-list">
+      <dt>Flat Location</dt>
         <div
           id="map"
           style="width: 100%;
           height: 600px;"
           data-markers="<%= @markers.to_json %>"
           data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+          class="uk-box-shadow-small uk-border-rounded"
         ></div>
-    </section>
+        <br>
+        <a href="#" uk-totop uk-scroll>Top</a>
   </div>
 
 </div>

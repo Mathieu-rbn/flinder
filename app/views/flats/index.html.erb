@@ -1,22 +1,36 @@
-<div class="container">
+<div class="container d-flex align-content-center vh-75 rounded">
 <% @flats.each_with_index do |flat, index| %>
-  <div class="flat-box <%= 'active' if index == 0 %> ">
-    <%= render "carousel" %>
-    <h4 class="text-center"><%= flat.title %></h4>
-    <p class="text-center"><small class="text-muted"> <%= flat.address %></p></small>
-    <div class="container d-flex justify-content-around flow-row mb-3 ">
-      <p class="mx-1" ><i class="fas fa-door-open mr-1"></i><%= flat.bedroom + 1 %></p>
-      <p class="mx-1" ><i class="fas fa-euro-sign mr-1"></i><%= flat.rent %></p>
-      <p class="mx-1" ><i class="fas fa-home mr-1"></i><%= flat.square_meter %></p>
-      <p class="mx-1" ><i class="fas fa-ticket-alt mr-1"></i><%= flat.vacant_from %></p>
+ <div class="uk-card uk-card-default uk-width-1-2@m uk-box-shadow-small flat-box <%= 'active' if index == 0 %>">
+    <div class="uk-card-media-top uk-border-rounded">
+      <img data-src="https://images.unsplash.com/photo-1470619681920-17fd5fd2f094?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" width="400" height="500" alt="" class="uk-border-rounded" uk-img >
     </div>
-    <div class="d-flex justify-content-center">
-      <%= link_to 'no', flat_viewings_path(flat, viewing: {like: false}), method: :post, remote: true, class: "btn-danger btn like-btn btn-lg rounded", "data-flat-id" => flat.id %>
-      <%= link_to 'yes', flat_viewings_path(flat, viewing: {like: true}), method: :post, remote: true, class: "btn-success btn like-btn btn-lg rounded", "data-flat-id" => flat.id %>
+    <div>
+      <h4 class="uk-margin-small-left uk-card-title uk-margin-top uk-margin-remove-bottom"><%= flat.title %></h4>
+      <p class="uk-margin-small-left uk-text-small uk-margin-remove-top"><span uk-icon="location"></span><%= flat.address %></p>
+         <%= link_to flat_path(flat), class: "uk-margin-small-left" do %>
+             <span uk-icon="more"></span> More Information
+         <% end %>
+      <hr>
     </div>
-    <div class="container mt-5 d-flex justify-content-center">
-      <%= link_to "More Information", flat_path(flat) %>
-    </div>
-  </div>
+     <div class="uk-card-body uk-flex uk-padding-remove-vertical ">
+          <p class="uk-margin-remove mr-2"><i class="fas fa-euro-sign mx-2"></i><%= flat.rent %></p>
+          <p class="uk-margin-remove mr-2"><i class="fas fa-home mx-2"></i><%= flat.square_meter %></p>
+          <p class="uk-margin-remove mr-2"><i class="fas fa-ticket-alt mx-2"></i><%= flat.vacant_from %></p>
+          <p class= "uk-margin-remove mr-2"><i class="fas fa-door-open mx-2"></i><%= flat.bedroom + 1 %></p>
+     </div>
+     <div class="uk-card-footer uk-flex uk-flex-center">
+       <%= link_to flat_viewings_path(flat, viewing: {like: false}), method: :post, remote: true, class: "uk-button uk-button-danger uk-button-large", "data-flat-id" => flat.id  do %>
+           <span uk-icon="close"></span>
+       <% end %>
+       <%= link_to flat_viewings_path(flat, viewing: {like: true}), method: :post, remote: true, class: "uk-button uk-button-primary uk-button-large", "data-flat-id" => flat.id  do %>
+           <span uk-icon="check"></span>
+       <% end %>
+<!--
+        <%#= link_to 'no', flat_viewings_path(flat, viewing: {like: false}), method: :post, remote: true, class: "uk-button uk-button-primary uk-button-large", "data-flat-id" => flat.id %>
+        <%#= link_to 'class: ', flat_viewings_path(flat, viewing: {like: true}), method: :post, remote: true, class: "uk-button uk-button-danger uk-button-large", "data-flat-id" => flat.id %> -->
+      </div>
+      <div class="uk-card-footer">
+     </div>
+ </div>
 <% end %>
 </div>
