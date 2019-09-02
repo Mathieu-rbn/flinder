@@ -7,7 +7,7 @@ import { initHammer } from '../plugins/init_hammer';
 initMapbox();
 initHammer();
 
-const flats = document.querySelectorAll('.flat-box');
+/*const flats = document.querySelectorAll('.flat-box');
 
 const buttons = document.querySelectorAll('.like-btn');
 console.log(buttons)
@@ -18,3 +18,4 @@ buttons.forEach((btn) => {
     const flatId = event.currentTarget.dataset.flatId;
   })
 })
+*/

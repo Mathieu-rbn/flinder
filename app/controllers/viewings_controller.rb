@@ -5,10 +5,16 @@ class ViewingsController < ApplicationController
     @viewing.flat = @flat
     @viewing.user = current_user
     if @viewing.save
-      if @viewing.is_matched
-        redirect_to flats_path, notice: "you have a match!"
-      else
-        redirect_to flats_path
+      @flats = Flat.flat_query(current_user)
+      respond_to do |format|
+        format.html { redirect_to flats_path }
+        format.js # viewings/create.js.erb
+      end
+    else
+      @flats = Flat.flat_query(current_user)
+      respond_to do |format|
+        format.html { redirect_to flats_path }
+        format.js
       end
     end
   end
