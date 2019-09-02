@@ -4,7 +4,8 @@
 # Examples:
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+Match.destroy_all
+ puts "destroy all matches"
 
 Viewing.destroy_all
  puts "destroy all users"
@@ -19,33 +20,33 @@ User.destroy_all
 u1 = User.create!(first_name: "John", last_name: "Doe", email: "test1@example.com",
 password: "123456", property_type: "Flat", bathroom: 1, bedroom: 2,
 district: "Prenzlaeur Berg", total_rent:1400)
-u2 = User.create!(first_name: "test2", last_name: "2", email: "test2@example.com",
+u2 = User.create!(first_name: "Maria", last_name: "Mueller", email: "test2@example.com",
 password: "123456", property_type: "Flat",bathroom: 1, bedroom: 1,
 district: "Mitte", total_rent:950)
-u3 = User.create!(first_name: "test3", last_name: "3", email: "test3@example.com",
+u3 = User.create!(first_name: "Peter", last_name: "Parker", email: "test3@example.com",
 password: "123456", property_type: "Flat",bathroom: 1, bedroom: 2,
 district: "Prenzlaeur Berg", total_rent:1250)
-u4 = User.create!(first_name: "test4", last_name: "4", email: "test4@example.com",
+u4 = User.create!(first_name: "Matthew", last_name: "Jones", email: "test4@example.com",
 password: "123456", property_type: "Flat",bathroom: 1, bedroom: 2,
 district: "Prenzlaeur Berg", total_rent:1280)
-u5 = User.create!(first_name: "test5", last_name: "5", email: "test5@example.com",
+u5 = User.create!(first_name: "Paul", last_name: "Sinner", email: "test5@example.com",
 password: "123456", property_type: "Flat",bathroom: 1, bedroom: 2,
 district: "Prenzlaeur Berg", total_rent:1300)
 
 
-u6 = User.create!(first_name: "test6", last_name: "6", email: "test6@example.com",
+u6 = User.create!(first_name: "Isaac", last_name: "Fish", email: "test6@example.com",
 password: "123456", property_type: "Flat",bathroom: 1, bedroom: 1,
 district: "Mitte ", total_rent:950)
-u7 = User.create!(first_name: "test7", last_name: "7", email: "test7@example.com",
+u7 = User.create!(first_name: "Carl", last_name: "Ruegge", email: "test7@example.com",
 password: "123456", property_type: "Flat",bathroom: 1, bedroom: 1,
 district: "Mitte", total_rent:900)
-u8 = User.create!(first_name: "test8", last_name: "8", email: "test8@example.com",
+u8 = User.create!(first_name: "Frank", last_name: "Last", email: "test8@example.com",
 password: "123456", property_type: "Flat",bathroom: 1, bedroom: 1,
 district: "Mitte", total_rent:850)
-u9 = User.create!(first_name: "test9", last_name: "9", email: "test9@example.com",
+u9 = User.create!(first_name: "Julia", last_name: "Friedrich", email: "test9@example.com",
 password: "123456", property_type: "Flat",bathroom: 1, bedroom: 1,
 district: "Mitte", total_rent:900)
-u10 = User.create!(first_name: "James", last_name: "Bond", email: "test10@example.com",
+u10 = User.create!(first_name: "Lisa", last_name: "Bond", email: "test10@example.com",
 password: "123456", property_type: "Flat",bathroom: 1, bedroom: 1,
 district: "Mitte", total_rent:950)
 
