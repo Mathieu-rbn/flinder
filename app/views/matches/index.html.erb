@@ -1,19 +1,22 @@
-
-<h1>Your matches</h1>
-<br>
-<% @matches.each do |match| %>
-<div class="card-product">
-  <% flat = match.other_party(current_user.flat) %>
-  <img src=<%= flat.photo%> />
-  <div class="card-product-infos">
-
-    <h2><strong><%= flat.id%> <%= flat.street %> - <%= flat.post_code %> <%= flat.district %></strong></h2>
-    <p><%= flat.description %> in <%= flat.district %> </p>
+<div class="uk-container">
+<h4>Your Matches</h4>
+  <% @matches.each do |match| %>
+  <div>
+    <div class="uk-child-width-1-2@s">
+        <% flat = match.other_party(current_user.flat) %>
+        <div class="uk-card uk-card-default uk-card-small uk-card-body">
+          <h5 class="uk-card"><%= flat.title %></h5>
+          <img class="uk-border-rounded" src=<%= flat.photo%> />
+          <div class="uk-card-body uk-flex uk-padding-remove-vertical uk-margin-small-top">
+          <p class="uk-margin-remove mr-2"><i class="fas fa-euro-sign mx-2"></i><%= flat.rent %></p>
+          <p class="uk-margin-remove mr-2"><i class="fas fa-home mx-2"></i><%= flat.square_meter %></p>
+          <p class="uk-margin-remove mr-2"><i class="fas fa-ticket-alt mx-2"></i><%= flat.vacant_from %></p>
+          <p class= "uk-margin-remove mr-2"><i class="fas fa-door-open mx-2"></i><%= flat.bedroom + 1 %></p>
+        </div>
+          <%= link_to "Send a message", "#", class: "uk-button uk-button-danger uk-width-1-1 uk-margin-small-top" %>
+          <%= link_to "More details about person", match_path(match), class: "uk-button uk-button-primary uk-width-1-1 uk-margin-small-top" %>
+        </div>
   </div>
-  <div class="btn-group btn-group-sm d-flex align-items-end" role="group" aria-label="Basic example">
-  <%= link_to "See more", match_path(match), class: "btn btn-danger btn-block btn-sm mt-2" %>
   </div>
+  <% end %>
 </div>
-<br>
-<% end %>
-
