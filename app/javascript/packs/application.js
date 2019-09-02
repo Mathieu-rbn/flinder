@@ -10,6 +10,7 @@ initHammer();
 const flats = document.querySelectorAll('.flat-box');
 
 const buttons = document.querySelectorAll('.like-btn');
+console.log(buttons)
 buttons.forEach((btn) => {
   btn.addEventListener('ajax:success', (event) => {
     document.querySelector('.flat-box.active').remove();
