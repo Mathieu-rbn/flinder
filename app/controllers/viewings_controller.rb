@@ -5,7 +5,11 @@ class ViewingsController < ApplicationController
     @viewing.flat = @flat
     @viewing.user = current_user
     if @viewing.save
-      redirect_to flat_path @flat
+      if @viewing.is_matched
+        redirect_to flats_path, notice: "you have a match!"
+      else
+        redirect_to flats_path
+      end
     end
   end
 
