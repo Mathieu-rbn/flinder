@@ -5,15 +5,28 @@ class ViewingsController < ApplicationController
     @viewing.flat = @flat
     @viewing.user = current_user
     if @viewing.save
-      if @viewing.is_matched
-        redirect_to flats_path, notice: "you have a match!"
-      else
-        redirect_to flats_path
+      respond_to do |format|
+        format.html {render 'viewings/like'}
+        format.js
       end
-    end
+    else
+      respond_to do |format|
+        format.html {render 'viewings/like'}
+        format.js
+      end
   end
+end
+      # if @viewing.is_matched?
+
+      #   redirect_to flats_path, notice: "you have a match!"
+
+      # else
+      #   redirect_to flats_path
+      # end
 
   def viewing_params
     params.require(:viewing).permit(:user, :like)
   end
 end
+
+
