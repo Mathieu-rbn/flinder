@@ -9,18 +9,11 @@
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended that you check this file into your version control system.
-ActiveRecord::Schema.define(version: 2019_08_28_152018) do
+
+ActiveRecord::Schema.define(version: 2019_09_02_103247) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "flat_photos", force: :cascade do |t|
-    t.string "data"
-    t.bigint "flat_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["flat_id"], name: "index_flat_photos_on_flat_id"
-  end
 
   create_table "flats", force: :cascade do |t|
     t.string "title"
@@ -64,6 +57,14 @@ ActiveRecord::Schema.define(version: 2019_08_28_152018) do
     t.datetime "updated_at", null: false
     t.index ["asker_id"], name: "index_matches_on_asker_id"
     t.index ["receiver_id"], name: "index_matches_on_receiver_id"
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.string "photo"
+    t.bigint "flat_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["flat_id"], name: "index_photos_on_flat_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -114,10 +115,10 @@ ActiveRecord::Schema.define(version: 2019_08_28_152018) do
     t.index ["user_id"], name: "index_viewings_on_user_id"
   end
 
-  add_foreign_key "flat_photos", "flats"
   add_foreign_key "flats", "users"
   add_foreign_key "matches", "flats", column: "asker_id"
   add_foreign_key "matches", "flats", column: "receiver_id"
+  add_foreign_key "photos", "flats"
   add_foreign_key "viewings", "flats"
   add_foreign_key "viewings", "users"
 end
