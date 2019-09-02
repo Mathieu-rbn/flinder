@@ -19,10 +19,10 @@
           <p class= "uk-margin-remove mr-2"><i class="fas fa-door-open mx-2"></i><%= flat.bedroom + 1 %></p>
      </div>
      <div class="uk-card-footer uk-flex uk-flex-center">
-       <%= link_to flat_viewings_path(flat, viewing: {like: false}), method: :post, remote: true, class: "uk-button uk-button-danger uk-button-large", "data-flat-id" => flat.id  do %>
+       <%= link_to flat_viewings_path(flat, viewing: {like: false}), method: :post, remote: true, class: "uk-button uk-button-danger uk-button-large like-btn", "data-flat-id" => flat.id  do %>
            <span uk-icon="close"></span>
        <% end %>
-       <%= link_to flat_viewings_path(flat, viewing: {like: true}), method: :post, remote: true, class: "uk-button uk-button-primary uk-button-large", "data-flat-id" => flat.id  do %>
+       <%= link_to flat_viewings_path(flat, viewing: {like: true}), method: :post, remote: true, class: "uk-button uk-button-primary uk-button-large like-btn", "data-flat-id" => flat.id  do %>
            <span uk-icon="check"></span>
        <% end %>
 <!--
@@ -34,3 +34,10 @@
  </div>
 <% end %>
 </div>
+
+<!--
+1. rewrite viewings#create into ajax (respond_to)
+2. create.js.erb for viewings
+3. j render flashes partial (look to see what vars are needed for flashes)
+4. cheer
+ -->
