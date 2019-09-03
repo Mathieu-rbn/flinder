@@ -1,5 +1,8 @@
 import "bootstrap";
 import 'mapbox-gl/dist/mapbox-gl.css'; // <-- you need to uncomment the stylesheet_pack_tag in the layout!
+// import { initSweetalert } from '../plugins/init_sweetalert';
+import swal from 'sweetalert';
+
 
 import { initMapbox } from '../plugins/init_mapbox';
 import { initHammer } from '../plugins/init_hammer';
@@ -7,15 +10,13 @@ import { initHammer } from '../plugins/init_hammer';
 initMapbox();
 initHammer();
 
-/*const flats = document.querySelectorAll('.flat-box');
+import flats from "../modules/flats"
 
 const buttons = document.querySelectorAll('.like-btn');
-console.log(buttons)
-buttons.forEach((btn) => {
-  btn.addEventListener('ajax:success', (event) => {
-    document.querySelector('.flat-box.active').remove();
-    document.querySelectorAll('.flat-box')[0].classList.add('active');
-    const flatId = event.currentTarget.dataset.flatId;
-  })
-})
-*/
+
+if (buttons) {
+  flats();
+}
+
+//
+
