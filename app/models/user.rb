@@ -9,4 +9,9 @@ class User < ApplicationRecord
   # validates :first_name, presence: true
   # validates :last_name, presence: true
   # validates :property_type, presence: true
+
+
+  def matches_for_user?
+    flat.asked_matches.present? || flat.received_matches.present?
+  end
 end

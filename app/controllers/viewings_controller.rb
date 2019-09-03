@@ -5,17 +5,13 @@ class ViewingsController < ApplicationController
     @viewing.flat = @flat
     @viewing.user = current_user
     if @viewing.save
+      matched =  @viewing.matched?
+      @match = Match.last
       @flats = Flat.flat_query(current_user)
-      respond_to do |format|
-        format.html { redirect_to flats_path }
-        format.js # viewings/create.js.erb
-      end
+      render json: { matched: matched, flats: @flats }
     else
       @flats = Flat.flat_query(current_user)
-      respond_to do |format|
-        format.html { redirect_to flats_path }
-        format.js
-      end
+      redirect_to flats_path, alert: "issue with this Match"
     end
   end
 

@@ -1,7 +1,5 @@
 class Viewing < ApplicationRecord
-  def intialize
-    @is_matched = false
-  end
+
   belongs_to :user
   belongs_to :flat
   validates :user, uniqueness: { scope: :flat }
@@ -9,13 +7,12 @@ class Viewing < ApplicationRecord
   after_save :check_matching, if: :like?
 
   def matched?
-    @is_matched
+    check_matching == 1
   end
 
   private
 
   def check_matching
-    matched = MatcherService.check(self)
-    @is_matched = true if matched == 1
+    MatcherService.check(self)
   end
 end

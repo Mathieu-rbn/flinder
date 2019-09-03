@@ -1,12 +1,8 @@
 <div class="container d-flex align-content-center vh-75 rounded" id="flats_partial_show">
-<%# @flats.each_with_index do |flat, index| %>
-<%= render 'viewings/flats_list', flats: @flats %>
+<% @flats.each_with_index do |flat, index| %>
+<%= render 'viewings/flats_list', flat: flat, index: index %>
 
+
+<% end %>
 </div>
 
-<!--
-1. rewrite viewings#create into ajax (respond_to)
-2. create.js.erb for viewings
-3. j render flashes partial (look to see what vars are needed for flashes)
-4. cheer
- -->
