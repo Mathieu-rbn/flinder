@@ -5,11 +5,13 @@ class ViewingsController < ApplicationController
     @viewing.flat = @flat
     @viewing.user = current_user
     if @viewing.save
-      if @viewing.is_matched
-        redirect_to flats_path, notice: "you have a match!"
-      else
-        redirect_to flats_path
-      end
+      matched = @viewing.matched?
+      @match = Match.last
+      @flats = Flat.flat_query(current_user)
+      render json: { matched: matched, flats: @flats }
+    else
+      @flats = Flat.flat_query(current_user)
+      redirect_to flats_path, alert: "issue with this Match"
     end
   end
 

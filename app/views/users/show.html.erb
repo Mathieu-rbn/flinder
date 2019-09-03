@@ -10,14 +10,26 @@
       <ul>
         <li><%= @user.first_name %></li>
         <li><%= @user.last_name %></li>
-        <li><%= @user.mobile %></li>
+        <li><%= @user.profile_photo %></li>
       </ul>
-
-      <strong>Flat Owner</strong>
-        </h2>
-          <p> <%= @user.first_name %> <%= @user.last_name %>|
-              <%= @user.email %>
+    </p>
+  </div>
+      <h2>My Preferences</h2>
+      <section class="py-5">
+        <div class="container">
+          <p class="lead">
+            <ul>
+              <li><%= @user.city %></li>
+              <li><%= @user.district %></li>
+              <li><%= @user.property_type %></li>
+              <li><%= @user.bedroom %></li>
+              <li><%= @user.bathroom %></li>
+              <li><%= @user.garage %></li>
+              <li><%= @user.total_rent %></li>
+            </ul>
           </p>
+        </div>
+
 
     <div class="container d-flex flow-row mb-3">
       <p class="mx-1" ><i class="fas fa-home mr-1"></i><%= @user.district %></p>

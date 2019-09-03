@@ -7,9 +7,6 @@
         </div>
       </div>
       <div class="uk-navbar-left">
-        <div class="uk-navbar-item uk-padding-remove-horizontal">
-          <span uk-icon="bell"></span>
-        </div>
       </div>
       <div class="uk-navbar-right">
         <ul class="uk-navbar-nav uk-visible@s">
@@ -21,7 +18,7 @@
                 <li><%= link_to "Your matches", matches_path%></li>
                 <li><%= link_to "Find new home", flats_path%></li>
                 <li><%= link_to "Add current home", new_flat_path%></li>
-                <li><%= link_to "Profile / preferences", new_user_path(@user)%></li>
+                <li><%= link_to "Profile / preferences", edit_user_registration_path(current_user)%></li>
                 <li> <%= link_to "Log out", destroy_user_session_path, method: :delete%></li>
                 <li><%= link_to "Login", new_user_session_path%></li>
               </ul>
@@ -36,22 +33,30 @@
 <div id="offcanvas-nav" data-uk-offcanvas="flip: true; overlay: false">
   <div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-slide">
     <button class="uk-offcanvas-close uk-close uk-icon" type="button" data-uk-close></button>
-    <ul class="uk-nav uk-nav-default">
+    <div class="uk-flex-top">
+      <% if current_user  %>
+      <h4 id="banner-name">Hello <%= current_user.first_name %></h4>
+      <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
+      <% end  %>
+    </div>
+    <hr>
+    <ul class="uk-nav uk-nav-default uk-margin-top">
      <li> <%= link_to root_path do %>
            <span uk-icon="home"></span> Home
        <% end %></li>
       <li><%= link_to matches_path do %>
-            <span uk-icon="heart"></span> Your matches
+            <span uk-icon="heart"></span> My matches
         <% end %></li>
       <li><%= link_to flats_path do %>
-            <span uk-icon="search"></span> Find new home
+            <span uk-icon="search"></span> Find my new home
         <% end %></li>
       <li><%= link_to new_flat_path do %>
-           <span uk-icon="plus-circle"></span> Find new home
+           <span uk-icon="plus-circle"></span> Add my home
        <% end %></li>
-      <li><%= link_to new_user_path(@user) do %>
+      <li><%= link_to edit_user_registration_path(@user) do %>
             <span uk-icon="user"></span> Profile & Preferences
         <% end %></li>
+        <hr>
       <% if current_user.nil? %>
       <li><%= link_to new_user_session_path do %>
             <span uk-icon="sign-in"></span> sign-in

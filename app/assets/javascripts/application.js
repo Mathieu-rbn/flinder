@@ -1,6 +1,7 @@
 //= require jquery
 //= require rails-ujs
 //= require_tree .
+
 (function () {
     var Message;
     Message = function (arg) {
@@ -58,3 +59,4 @@
         }, 25000);
     });
 }.call(this));
+
