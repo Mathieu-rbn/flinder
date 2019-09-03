@@ -6,7 +6,7 @@
     <div class="uk-card-header">
         <div class="uk-grid-small uk-flex-middle" uk-grid>
             <div class="uk-width-auto">
-                <img class="uk-border-circle uk-box-shadow" height="25" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80">
+                <%= cl_image_tag @flat.user.profile_photo%>
             </div>
           <div class="uk-width-expand">
             <h5 class="uk-card uk-text-center"><%= @flat.user.first_name %> <%= @flat.user.last_name %></h5>
@@ -19,7 +19,7 @@
             </div>
         </div>
     </div class="uk-margin-bottom">
-    <%= link_to "Send a message", root_path, class: "uk-button uk-button-danger uk-width-1-1 uk-margin-small-top" %>
+    <%= link_to "Send a message", chats_path(), class: "uk-button uk-button-danger uk-width-1-1 uk-margin-small-top" %>
     </div>
 </div>
 </div>
