@@ -18,6 +18,7 @@ class FlatsController < ApplicationController
   end
 
   def index
+    @flats = Flat.flat_query(current_user)
     #@flats = Flat.where(district: current_user.district)
 #    .or(Flat.where(bathroom: current_user.bathroom)
 #      .or(Flat.where(bathroom: current_user.bathroom)
@@ -25,11 +26,16 @@ class FlatsController < ApplicationController
 #          .or(Flat.where(bathroom: current_user.bathroom)
 #            .or(Flat.where(bathroom: current_user.bathroom))))))
 
-    @flats = Flat.all
-    @flats = @flats.where(district: current_user.district)
-    @flats = @flats.where(bathroom: current_user.bathroom)
-    .or(@flats.where(bedroom: current_user.bedroom)
-      .or(@flats.where(type_heating: current_user.type_heating)))
+    # @flats = Flat.all
+    # @flats = Flat.filter do |flat|
+    #   flat.matches.each do |match|
+
+    #   end
+    # end
+    # @flats = @flats.where(district: current_user.district)
+    # @flats = @flats.where(bathroom: current_user.bathroom)
+    # .or(@flats.where(bedroom: current_user.bedroom)
+    #   .or(@flats.where(type_heating: current_user.type_heating)))
 
     #@flats = @flats.where(bedroom: current_user.bedroom)
 
