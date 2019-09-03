@@ -1,7 +1,7 @@
 <div class="container w-50">
   <div class="row">
     <div class="col">
-<%= simple_form_for @user do |f| %>
+<%= simple_form_for current_user do |f| %>
 
   <H2>My profile</h2>
     <%= f.input :first_name, placeholder:'First Name'  %>
@@ -11,7 +11,7 @@
     <%= f.input :mobile, placeholder:'mobile'  %>
 
   <H2>Photos</h2>
-  <%= f.input :photo, as: :file, hint: 'Upload your home picture' %>
+  <%= f.input :profile_photo, as: :file, hint: 'Upload your home picture' %>
 
   <H2>My preferences</h2>
     <%= f.input :district, as: :check_boxes, collection: ['Mitte', 'Charlottenburg', 'Kreuzberg','Prenzlaeur Berg', 'Schöneberg', 'Friedrichshain', 'Wilmesdorf', 'Neukölln','Tiergarten', 'Steglitz', 'Friedenau'],hint: 'Kreuzberg, Neukölln' %>
@@ -26,7 +26,6 @@
     <%= f.input :bathroom, as: :radio_buttons, collection: 1..3, selected: 1   %>
     <%= f.input :bedroom, as: :radio_buttons, collection: ['1','2','3','4','5','6+']   %>
     <%= f.input :type_heating, as: :radio_buttons, collection: ['Central heating', 'Gaz', 'Electricity'] %>
-    <%= f.input :year_construction, as: :check_boxes, collection: ['before 1900','1900-1945','1945-1960','1960-1990','1990-2019'] %>
     <%= f.input :vacant_from, as: :date %>
 
   <H2>Price</h2>
