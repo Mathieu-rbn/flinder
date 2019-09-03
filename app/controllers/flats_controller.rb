@@ -71,7 +71,7 @@ class FlatsController < ApplicationController
     params.require(:flat).permit(:title, :description, :bathroom, :bedroom, :property_type, :street,
                                  :district, :post_code, :city, :price, :content, :total_rent, :rent,
                                  :garage, :level_floor, :floors_number, :vacant_from, :square_meter,
-                                 :land, :year_construction, :type_heating, :elevator)
+                                 :land, :year_construction, :type_heating, :elevator, :furnished)
   end
 
   def create_photos (resource)

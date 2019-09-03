@@ -6947,6 +6947,11 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
+uikit@^3.1.9:
+  version "3.1.9"
+  resolved "https://registry.yarnpkg.com/uikit/-/uikit-3.1.9.tgz#c9b8a438d6d73ef67f11656d667de65b11abe198"
+  integrity sha512-19qbcR1rMX9zT61KZJ2fafJ0se0qBa/p9bXPznPw59ZUjcRB9fCPHX82X6IO+RkcMlN6OupX09l9OFttYuMptw==
+
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/unicode-canonical-property-names-ecmascript/-/unicode-canonical-property-names-ecmascript-1.0.4.tgz#2619800c4c825800efdd8343af7dd9933cbe2818"
