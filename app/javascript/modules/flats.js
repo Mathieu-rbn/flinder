@@ -33,3 +33,4 @@ const btns = document.querySelectorAll('.like-btn');
 }
 
 export default flats;
+//
