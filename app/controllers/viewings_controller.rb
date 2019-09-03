@@ -5,7 +5,7 @@ class ViewingsController < ApplicationController
     @viewing.flat = @flat
     @viewing.user = current_user
     if @viewing.save
-      matched =  @viewing.matched?
+      matched = @viewing.matched?
       @match = Match.last
       @flats = Flat.flat_query(current_user)
       render json: { matched: matched, flats: @flats }
