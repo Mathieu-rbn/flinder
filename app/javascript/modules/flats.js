@@ -13,6 +13,7 @@ function handleFlats(event){
     swal({
         title: "Flinder Time",
         text: "You got a match, isn't wonderful?",
+
         icon: "success",
         showConfirmButton: false,
         timer: 2000
