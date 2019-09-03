@@ -16,13 +16,13 @@
           <p class="uk-margin-remove mr-2"><i class="fas fa-euro-sign mx-2"></i><%= flat.rent %></p>
           <p class="uk-margin-remove mr-2"><i class="fas fa-home mx-2"></i><%= flat.square_meter %></p>
           <p class="uk-margin-remove mr-2"><i class="fas fa-ticket-alt mx-2"></i><%= flat.vacant_from %></p>
-          <p class= "uk-margin-remove mr-2"><i class="fas fa-door-open mx-2"></i><%= flat.bedroom  %></p>
+          <p class= "uk-margin-remove mr-2"><i class="fas fa-door-open mx-2"></i><%= flat.bedroom + 1 %></p>
      </div>
      <div class="uk-card-footer uk-flex uk-flex-center">
-       <%= link_to flat_viewings_path(flat, viewing: {like: false}), method: :post, remote: true, class: "uk-button uk-button-danger uk-button-large", "data-flat-id" => flat.id  do %>
+       <%= link_to flat_viewings_path(flat, viewing: {like: false}), method: :post, remote: true, class: "uk-button uk-button-danger uk-button-large like-btn", "data-flat-id" => flat.id  do %>
            <span uk-icon="close"></span>
        <% end %>
-       <%= link_to flat_viewings_path(flat, viewing: {like: true}), method: :post, remote: true, class: "uk-button uk-button-primary uk-button-large", "data-flat-id" => flat.id  do %>
+       <%= link_to flat_viewings_path(flat, viewing: {like: true}), method: :post, remote: true, class: "uk-button uk-button-primary uk-button-large like-btn", "data-flat-id" => flat.id  do %>
            <span uk-icon="check"></span>
        <% end %>
 <!--
@@ -33,9 +33,10 @@
      </div>
  </div>
 <% end %>
-
-<div class="container d-flex align-content-center vh-75 rounded" id="flats_partial_show">
-<%# @flats.each_with_index do |flat, index| %>
-<%= render 'viewings/flats_list', flats: @flats %>
-
 </div>
+<!--
+1. rewrite viewings#create into ajax (respond_to)
+2. create.js.erb for viewings
+3. j render flashes partial (look to see what vars are needed for flashes)
+4. cheer
+ -->
