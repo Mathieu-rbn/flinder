@@ -10,6 +10,7 @@
             <dt class="uk-text">Description</dt>
             <dd class="uk-dropcap"><%= @flat.description %></dd>
         </dl>
+
         <!-- Flat Extras -->
         <hr class="uk-divider-icon">
         <dl class="uk-description-list">
@@ -19,22 +20,37 @@
             <p class="mx-1" ><i class="fas fa-burn mr-1"></i><%= @flat.type_heating %></p>
             <p class="mx-1" ><i class="fas fa-home mr-1"></i><%= @flat.square_meter %></p>
           </dl>
-      <hr class="uk-divider-icon">
 
-      <!-- Flat Location -->
-      <dl class="uk-description-list">
-      <dt>Flat Location</dt>
-        <div
-          id="map"
-          style="width: 100%;
-          height: 600px;"
-          data-markers="<%= @markers.to_json %>"
-          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-          class="uk-box-shadow-small uk-border-rounded"
-        ></div>
-        <br>
-        <a href="#" uk-totop uk-scroll>Top</a>
-  </div>
+
+
+                <!-- Carousel Flat Pictures -->
+
+        <hr class="uk-divider-icon uk-margin-remove uk-text-meta ">
+        <dl class="uk-description-list">
+            <dt class="uk-text">Photos</dt>
+            <%= render "flats/carousel", flat: @flat %>
+        </dl>
+
+
+        <hr class="uk-divider-icon">
+
+
+                <!-- Flat Location -->
+                <dl class="uk-description-list">
+                <dt>Flat Location</dt>
+                  <div
+                    id="map"
+                    style="width: 100%;
+                    height: 600px;"
+                    data-markers="<%= @markers.to_json %>"
+                    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+                    class="uk-box-shadow-small uk-border-rounded"
+                  ></div>
+                  <br>
+                  <a href="#" uk-totop uk-scroll>Top</a>
+          </div>
 
 </div>
+
+
 

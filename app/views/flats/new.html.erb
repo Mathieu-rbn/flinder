@@ -1,17 +1,15 @@
-<!-- lang="en-GB" -->
-
-<div class="container w-50">
-  <div class="row">
-    <div class="col">
+<div class="container d-flex align-content-center vh-75 rounded">
       <%= simple_form_for @flat do |f| %>
-        <h4>ADDING FLAT</h4>
+        <uk-h3 class="uk-list uk-list-divider">ADDING FLAT</h3>
 
-          <h5>Location</h5>
-            <%= f.input :address, placeholder:'type your address'  %>
-            <%= f.input :street  %>
-            <%= f.input :post_code, placeholder: 'add your postcode' %>
-            <%= f.input :city, as: :radio_buttons, collection: ['Berlin', 'London', 'Paris', 'Amsterdam'] %>
-            <%= f.input :district, as: :radio_buttons, collection: ['Mitte', 'Charlottenburg', 'Kreuzberg','Prenzlaeur Berg', 'Schöneberg', 'Friedrichshain', 'Wilmesdorf', 'Neukölln','Tiergarten', 'Steglitz', 'Friedenau'],hint: 'Kreuzberg, Neukölln' %>
+          <uk-h4>Location</h4>
+            <ul>
+              <li><%= f.input :address, placeholder:'type your address'  %></li>
+              <li><%= f.input :street  %>
+              <li><%= f.input :post_code, placeholder: 'add your postcode' %></li>
+              <li><%= f.input :city, as: :radio_buttons, collection: ['Berlin', 'London', 'Paris', 'Amsterdam'] %></li>
+              <li><%= f.input :district, as: :radio_buttons, collection: ['Mitte', 'Charlottenburg', 'Kreuzberg','Prenzlaeur Berg', 'Schöneberg', 'Friedrichshain', 'Wilmesdorf', 'Neukölln','Tiergarten', 'Steglitz', 'Friedenau']%></li>
+            </ul>
 
           <h5>House details</h5>
             <%= f.input :property_type,as: :radio_buttons, collection: ['House', 'Flat'], selected: 'Flat'  %>
@@ -24,23 +22,21 @@
             <%= f.input :vacant_from, as: :date %>
             <!--   <%= f.input :vacant_from, as: :string, input_html: {class: 'form_datepicker'} %> -->
 
-            <%= f.input :garage, as: :boolean %>
-            <%= f.input :elevator, as: :boolean %>
-            <%= f.input :furnished, as: :boolean %>
+          <ul class="uk-list uk-list-divider">
+            <li><%= f.input :garage, as: :boolean %></li>
+            <li><%= f.input :elevator, as: :boolean %></li>
+            <li><%= f.input :furnished, as: :boolean %></li>
+          </ul>
 
           <h5>Price</h5>
           <%= f.input :total_rent, as: :decimal %>
         <!--   <%= f.input :radius, as: :range , hint: 'just for test, will be deleted' %> -->
 
-
           <h5>Photos</h5>
           <%= f.input :photos, as: :file, label: false, input_html: {multiple: true} %>
           <%= f.submit "Save", class: "btn btn-secondary mb-3"  %>
 
-
-
         <% end %>
-
     </div>
   </div>
 </div>
