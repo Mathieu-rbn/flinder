@@ -4,11 +4,13 @@ import 'mapbox-gl/dist/mapbox-gl.css'; // <-- you need to uncomment the styleshe
 import swal from 'sweetalert';
 
 
+import { initAutocomplete } from '../plugins/init_autocomplete';
 import { initMapbox } from '../plugins/init_mapbox';
 import { initHammer } from '../plugins/init_hammer';
 
 initMapbox();
 initHammer();
+initAutocomplete();
 
 import flats from "../modules/flats"
 
