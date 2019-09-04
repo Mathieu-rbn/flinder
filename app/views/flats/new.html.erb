@@ -4,7 +4,7 @@
 
           <uk-h4>Location</h4>
             <ul>
-              <li><%= f.input :address, placeholder:'type your address'  %></li>
+              <li><%= f.input :address, placeholder:'type your address', id:"flat_address"  %></li>
               <li><%= f.input :street  %>
               <li><%= f.input :post_code, placeholder: 'add your postcode' %></li>
               <li><%= f.input :city, as: :radio_buttons, collection: ['Berlin', 'London', 'Paris', 'Amsterdam'] %></li>
