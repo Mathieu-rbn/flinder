@@ -7,9 +7,6 @@ return  `
     <div>
       <h4 class="uk-margin-small-left uk-card-title uk-margin-top uk-margin-remove-bottom">${flat.title}</h4>
       <p class="uk-margin-small-left uk-text-small uk-margin-remove-top"><span uk-icon="location"></span>${flat.address}</p>
-         <a href="/flats/${flat.id}" class="uk-margin-small-left">
-           <span uk-icon="more"></span> More Information
-         </a>
       <hr>
     </div>
      <div class="uk-card-body uk-flex uk-padding-remove-vertical ">
@@ -22,11 +19,14 @@ return  `
           <p class= "uk-margin-remove mr-2"><i class="fas fa-door-open mx-2"></i>
             ${flat.bedroom + 1}</p>
      </div>
-     <div class="uk-card-footer uk-flex uk-flex-center">
-       <a href="/flats/${flat.id}/viewings?viewing%5Blike%5D=false" data-remote="true" data-method="post" id="sweet-alert-demo", class="uk-button uk-button-danger uk-button-large like-btn" data-flat-id="${flat.id}">
+     <div class="uk-card-footer uk-flex uk-margin-auto">
+       <a href="/flats/${flat.id}/viewings?viewing%5Blike%5D=false" data-remote="true" data-method="post" , class="uk-button uk-button-danger uk-button-large like-btn uk-border-pill uk-margin-small-right" data-flat-id="${flat.id}">
         <span uk-icon="close"></span>
        </a>
-       <a href="/flats/${flat.id}/viewings?viewing%5Blike%5D=true" data-remote="true" data-method="post" id="sweet-alert-demo", class="uk-button uk-button-primary uk-button-large like-btn" data-flat-id="${flat.id}">
+       <a href="/flats/${flat.id}/" data-remote="true", class="uk-button uk-button-default uk-button-large like-btn uk-border-pill" data-flat-id="${flat.id}">
+        <span uk-icon="info"></span>
+       </a>
+       <a href="/flats/${flat.id}/viewings?viewing%5Blike%5D=true" data-remote="true" data-method="post" id="sweet-alert-demo", class="uk-button uk-button-primary uk-button-large like-btn uk-border-pill uk-margin-small-left" data-flat-id="${flat.id}">
          <span uk-icon="check"></span>
        </a>
     </div>
