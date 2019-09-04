@@ -12,12 +12,13 @@ class Flat < ApplicationRecord
 
   def self.flat_query(user)
     viewed_flats = user.viewings.pluck(:flat_id)
+    user_flat = user.flat.id
     @flats = Flat.where.not(id: viewed_flats)
+    @flats = @flats.where.not(user_id: user_flat)
     @flats = @flats.where(district: user.district)
     @flats = @flats.where(bathroom: user.bathroom)
     .or(@flats.where(bedroom: user.bedroom)
     .or(@flats.where(type_heating: user.type_heating)))
-
     return @flats.uniq
   end
   # validates :title, presence: true
