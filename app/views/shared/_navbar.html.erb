@@ -41,29 +41,26 @@
     </div>
     <hr>
     <ul class="uk-nav uk-nav-default uk-margin-top">
-     <li> <%= link_to root_path do %>
-           <span uk-icon="home"></span> Home
-       <% end %></li>
-      <li><%= link_to matches_path do %>
+      <li><%= link_to matches_path, class: "nav-font" do %>
             <span uk-icon="heart"></span> My matches
         <% end %></li>
-      <li><%= link_to flats_path do %>
-            <span uk-icon="search"></span> Find my new home
+      <li><%= link_to flats_path, class: "nav-font" do %>
+            <span uk-icon="search"></span> Find new home
         <% end %></li>
-      <li><%= link_to new_flat_path do %>
-           <span uk-icon="plus-circle"></span> Add my home
+      <li><%= link_to new_flat_path, class: "nav-font" do %>
+           <span uk-icon="plus-circle"></span> My home
        <% end %></li>
-      <li><%= link_to edit_user_registration_path(@user) do %>
-            <span uk-icon="user"></span> Profile & Preferences
+      <li><%= link_to edit_user_registration_path(@user), class: "nav-font" do %>
+            <span uk-icon="user"></span> My Profile & Preferences
         <% end %></li>
         <hr>
       <% if current_user.nil? %>
-      <li><%= link_to new_user_session_path do %>
+      <li><%= link_to new_user_session_path, class: "nav-font" do %>
             <span uk-icon="sign-in"></span> sign-in
         <% end %></li>
         <% end %>
         <% if user_signed_in? %>
-      <li><%= link_to destroy_user_session_path, method: :delete do %>
+      <li><%= link_to destroy_user_session_path, method: :delete, class: "nav-font" do %>
             <span uk-icon="sign-out"></span> sign-out
         <% end %></li>
         <% end %>
