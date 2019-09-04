@@ -2,16 +2,17 @@ const SingleFlat = (flat, index) => {
 return  `
 <div class="uk-card uk-card-default uk-width-1-2@m uk-box-shadow-small flat-box  ${index == 0 ? 'active' : '' }">
     <div class="uk-card-media-top uk-border-rounded">
-    <div><%= cl_image_tag flat.photos.first.photo, height: 300, width: 400, crop: :fill%></div>
 
-    //   <img data-src="https://images.unsplash.com/photo-1470619681920-17fd5fd2f094?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" width="400" height="500" alt="" class="uk-border-rounded" uk-img >
-    // </div>
+    <img data-src="${flat.photo}" width="400" height="500" alt="" class="uk-border-rounded" uk-img >
+    </div>
+
     <div>
       <h4 class="uk-margin-small-left uk-card-title uk-margin-top uk-margin-remove-bottom">${flat.title}</h4>
       <p class="uk-margin-small-left uk-text-small uk-margin-remove-top"><span uk-icon="location"></span>${flat.address}</p>
       <hr>
     </div>
      <div class="uk-card-body uk-flex uk-padding-remove-vertical ">
+
           <p class="uk-margin-remove mr-2"><i class="fas fa-euro-sign mx-2"></i>
             ${flat.rent}</p>
           <p class="uk-margin-remove mr-2"><i class="fas fa-home mx-2"></i>
