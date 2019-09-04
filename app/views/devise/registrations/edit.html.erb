@@ -1,3 +1,4 @@
+<div class ="uk-background-default container">
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -22,36 +23,42 @@
                 required: true,
                 input_html: { autocomplete: "current-password" } %>
 
-      <H2>My profile</h2>
-            <%= f.input :first_name, placeholder:'First Name'  %>
-            <%= f.input :last_name, placeholder:'Last Name'  %>
-            <%= f.input :mobile, placeholder:'mobile'  %>
 
+    <!-- Home details -->
+    <!-- <uk-h4>House details</h4> -->
+      <hr class="uk-divider-icon">
+        <H2>My profile</h2>
+              <%= f.input :first_name, placeholder:'John'  %>
+              <%= f.input :last_name, placeholder:'DOE'  %>
+              <%= f.input :mobile, placeholder:'06 23 45 34 56'  %>
+
+      <hr class="uk-divider-icon">
       <H2>Photos</h2>
       <%= f.input :profile_photo, as: :file, hint: 'Upload your profile picture' %>
 
+      <hr class="uk-divider-icon">
       <H2>My preferences</h2>
-        <%= f.input :district, as: :radio_buttons, collection: ['Mitte', 'Charlottenburg', 'Kreuzberg','Prenzlaeur Berg', 'Schöneberg', 'Friedrichshain', 'Wilmesdorf', 'Neukölln','Tiergarten', 'Steglitz', 'Friedenau'],hint: 'Kreuzberg, Neukölln' %>
+        <%= f.input :district, as: :select, collection: ['Mitte', 'Charlottenburg', 'Kreuzberg','Prenzlaeur Berg', 'Schöneberg', 'Friedrichshain', 'Wilmesdorf', 'Neukölln','Tiergarten', 'Steglitz', 'Friedenau'],hint: 'Kreuzberg, Neukölln' %>
 
-        <%= f.input :street  %>
+       <!--  <%= f.input :street  %>
         <%= f.input :post_code, placeholder: 'add your postcode' %>
-        <%= f.input :city, as: :radio_buttons, collection: ['Berlin', 'London', 'Paris', 'Amsterdam'] %>
+        <%= f.input :city, as: :select, collection: ['Berlin', 'London', 'Paris', 'Amsterdam'] %> -->
 
         <%= f.input :total_rent, as: :decimal %>
-        <%= f.input :property_type,as: :radio_buttons, collection: ['House', 'Flat'], selected: 'Flat'  %>
+        <%= f.input :property_type,as: :select, collection: ['House', 'Flat'], selected: 'Flat'  %>
         <%= f.input :square_meter, as: :integer %>
-        <%= f.input :bathroom, as: :radio_buttons, collection: 1..3, selected: 1   %>
-        <%= f.input :bedroom, as: :radio_buttons, collection: ['1','2','3','4','5','6+']   %>
-        <%= f.input :type_heating, as: :radio_buttons, collection: ['Central heating', 'Gaz', 'Electricity'] %>
+        <%= f.input :bathroom, as: :select, collection: 1..3, selected: 1   %>
+        <%= f.input :bedroom, as: :select, collection: ['1','2','3','4','5','6+']   %>
+        <%= f.input :type_heating, as: :select, collection: ['Central heating', 'Gaz', 'Electricity'] %>
 
-
-
-    <%= f.button :submit, "Update" %>
+    <%= f.button :submit, "Update", class:"uk-button uk-border-pill uk-button-danger uk-scrollspy-inview uk-animation-fade text-center mb-3" %>
   </div>
 <% end %>
 
-<h3>Cancel my account</h3>
+<!-- <h3>Cancel my account</h3>
 
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p> -->
+<!--
+<%= link_to "Back", :back %> -->
 
-<%= link_to "Back", :back %>
+</div>
