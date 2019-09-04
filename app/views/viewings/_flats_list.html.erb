@@ -5,9 +5,6 @@
     <div>
       <h4 class="uk-margin-small-left uk-card-title uk-margin-top uk-margin-remove-bottom"><%= flat.title %></h4>
       <p class="uk-margin-small-left uk-text-small uk-margin-remove-top"><span uk-icon="location"></span><%= flat.address %></p>
-         <%= link_to flat_path(flat), class: "uk-margin-small-left" do %>
-             <span uk-icon="more"></span> More Information
-         <% end %>
       <hr>
     </div>
      <div class="uk-card-body uk-flex uk-padding-remove-vertical ">
@@ -16,11 +13,14 @@
           <p class="uk-margin-remove mr-2"><i class="fas fa-ticket-alt mx-2"></i><%= flat.vacant_from %></p>
           <p class= "uk-margin-remove mr-2"><i class="fas fa-door-open mx-2"></i><%= flat.bedroom + 1 %></p>
      </div>
-     <div class="uk-card-footer uk-flex uk-flex-center">
-       <%= link_to flat_viewings_path(flat, viewing: {like: false}), method: :post, remote: true, class: "uk-button uk-button-danger uk-button-large like-btn", "data-flat-id" => flat.id  do %>
+     <div class="uk-card-footer uk-flex uk-margin-auto">
+       <%= link_to flat_viewings_path(flat, viewing: {like: false}), method: :post, remote: true, class: "uk-button uk-button-danger uk-button-large like-btn uk-border-pill uk-margin-small-right", "data-flat-id" => flat.id  do %>
            <span uk-icon="close"></span>
        <% end %>
-       <%= link_to flat_viewings_path(flat, viewing: {like: true}), method: :post, remote: true, id: "sweet-alert-demo",class: "uk-button uk-button-primary uk-button-large like-btn", "data-flat-id" => flat.id   do %>
+         <%= link_to flat_path(flat), class: "uk-button uk-button-default uk-button-large like-btn uk-border-pill" do %>
+             <span uk-icon="info"></span>
+         <% end %>
+       <%= link_to flat_viewings_path(flat, viewing: {like: true}), method: :post, remote: true, id: "sweet-alert-demo",class: "uk-button uk-button-primary uk-button-large like-btn uk-border-pill uk-margin-small-left", "data-flat-id" => flat.id   do %>
            <span uk-icon="check"></span>
        <% end %>
       </div>
