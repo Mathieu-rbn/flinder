@@ -8,7 +8,7 @@ buttons.forEach((btn) => btn.addEventListener('ajax:success', handleFlats))
 function handleFlats(event){
   // receive rails @flats, and matched from viewings#create
   const {matched, flats} = JSON.parse(event.detail[2].response)
-//  console.log({matched})
+//console.log({matched})
    if(matched) {
     swal({
         title: "Flinder Time",
