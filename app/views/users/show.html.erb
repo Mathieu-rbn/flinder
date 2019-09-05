@@ -1,50 +1,22 @@
-<header class="py-2 bg-image-full" style="background-image: url('https://unsplash.it/1900/1080?image=1076');" >
-    <img class="img-fluid d-block mx-auto" src="https://uidesign.gbtcdn.com/gb_blog/author/Steve-Lowry-2.png" alt="">
-</header>
-<!-- add the source to the owner flat -->
-
-<h2>My contact details</h2>
-<section class="py-5">
-  <div class="container">
-    <p class="lead">
-      <ul>
-        <li><%= @user.first_name %></li>
-        <li><%= @user.last_name %></li>
-        <li><%= @user.profile_photo %></li>
-      </ul>
-    </p>
+<br><br>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h2 align="center">Welcome to Flinder <%= @user.first_name %></h1>
+        <br>
+      <div class="card bg-light mb-3" style="max-width: 100rem;">
+  <div class="card-header"> <strong> Your preferences</strong></div>
+  <div class="card-body">
+    <h4 class="card-title">What will Flinder show you?</h4>
+    <p class="card-text">Flats located in <strong><%=@user.district%></strong>, which have <strong><%= @user.bedroom %> bedrooms </strong> and with <strong>prices not exceeding <%= @user.total_rent%> euros</strong>. <br><br>
+    Let's start!</p>
   </div>
-      <h2>My Preferences</h2>
-      <section class="py-5">
-        <div class="container">
-          <p class="lead">
-            <ul>
-              <li><%= @user.city %></li>
-              <li><%= @user.district %></li>
-              <li><%= @user.property_type %></li>
-              <li><%= @user.bedroom %></li>
-              <li><%= @user.bathroom %></li>
-              <li><%= @user.garage %></li>
-              <li><%= @user.total_rent %></li>
-            </ul>
-          </p>
-        </div>
-
-
-    <div class="container d-flex flow-row mb-3">
-      <p class="mx-1" ><i class="fas fa-home mr-1"></i><%= @user.district %></p>
-      <p class="mx-1" ><i class="fas fa-home mr-1"></i><%= @user.square_meter %></p>
-      <p class="mx-1" ><i class="fas fa-home mr-1"></i>Squaremeters</p>
+</div>
+<%= link_to "Search", flats_path(), class: "uk-button uk-button-danger uk-width-1-1 uk-margin-small-top uk-border-pill" %>
     </div>
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
 
 
-  <!-- Flat Location -->
-  <h2>Flat Location</h2>
-    <div
-      id="map"
-      style="width: 100%;
-      height: 600px;"
-      data-markers="<%= @markers.to_json %>"
-      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-    ></div>
-</section>
+

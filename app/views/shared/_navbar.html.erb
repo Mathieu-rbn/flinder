@@ -44,9 +44,15 @@
       <li><%= link_to matches_path, class: "nav-font" do %>
             <span uk-icon="heart"></span> My matches
         <% end %></li>
-      <li><%= link_to flats_path, class: "nav-font" do %>
+        <% if user_signed_in? %>
+      <li><%= link_to user_path(current_user), class: "nav-font" do %>
             <span uk-icon="search"></span> Find new home
         <% end %></li>
+        <% else %>
+        <li><%= link_to new_user_session_path, class: "nav-font" do %>
+            <span uk-icon="sign-in"></span> sign-in
+        <% end %></li>
+        <% end %>
       <li><%= link_to new_flat_path, class: "nav-font" do %>
            <span uk-icon="plus-circle"></span> My home
        <% end %></li>

@@ -7,7 +7,13 @@
           <div class="uk-width-1-2@s" data-uk-scrollspy="cls: uk-animation-slide-right-medium; target: > *; delay: 150">
             <h6 class="uk-text-primary uk-margin-small-bottom">Match & Find your new home <br> out of 7500 offerings</h6>
             <h1 class="uk-margin-remove-top">Flinder.</h1>
+
             <a href="flats" title="Learn More" class="uk-button uk-border-pill uk-button-danger"  data-uk-scrollspy-class="uk-animation-fade">Get Started</a>
+            <% if current_user %>
+            <a href="users/<%=current_user.id%>" title="Learn More" class="uk-button uk-border-pill uk-button-danger"  data-uk-scrollspy-class="uk-animation-fade">Get Started</a>
+            <% else %>
+            <a href="users/sign_up" title="Learn More" class="uk-button uk-border-pill uk-button-danger"  data-uk-scrollspy-class="uk-animation-fade">Get Started</a>
+            <% end %>
           </div>
         </div>
         <!-- /TOP CONTAINER -->
