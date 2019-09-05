@@ -5,11 +5,11 @@
   <% end %>
     <div class="uk-card-header">
         <div class="uk-grid-small uk-flex-middle" uk-grid>
-            <div class="uk-width-auto">
-                <%= cl_image_tag @flat.user.profile_photo%>
+            <div class="uk-width-auto uk-align-center">
+                <%= cl_image_tag @flat.user.profile_photo, class: "avatar1"%>
             </div>
           <div class="uk-width-expand">
-            <h5 class="uk-card uk-text-center"><%= @flat.user.first_name %> <%= @flat.user.last_name %></h5>
+            <h5 class="uk-card uk-text-center "><%= @flat.user.first_name %> <%= @flat.user.last_name %></h5>
                <hr class="uk-divider-icon">
                <dl class="uk-description-list">
                  <dt>Who I am</dt>

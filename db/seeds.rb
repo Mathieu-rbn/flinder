@@ -124,7 +124,7 @@ property_type:"Flat", bathroom: 1, bedroom:3, type_heating:"Electricity",
 year_construction: "1960-1990",square_meter: 80, title: "Amazing flat with 2 bedroom ",description:"This beautiful flat is located in the heart of Prenzlauer Berg. You are 2 minutes from any public transport, grocery shopping and a lot of bars and restaurant. The appartement is located at the 2d floor and has 2 bedrooms, perfect for a family.",
 vacant_from:"2019/10/1",rent:1200, user_id:u3.id, photo: "https://res.cloudinary.com/mathieurobin1/image/upload/v1567084950/Flinder/Flat_4_Prenzlaeur_Berg_u2mfyc.jpg")
 
-f4 = Flat.create!(address: "Kieler Str. 2, 10115 Berlin", city: "Berlin", district:"Mitte",
+f4 = Flat.create!(address: "er Str. 2, 10115 BerlinKiel", city: "Berlin", district:"Mitte",
 property_type:"Flat", bathroom: 1, bedroom: 1, type_heating:"Electricity",
 year_construction: "1945-1960",square_meter: 55,title: "Well located flat in Mitte",description:"This beautiful flat is located in the heart of Mitte. You are 2 minutes from any public transport, grocery shopping and a lot of bars and restaurant. The appartement is located at the 2d floor and has 2 bedrooms, perfect for a family.",
 vacant_from:"2019/10/1",rent: 950, user_id:u4.id, photo: "https://res.cloudinary.com/mathieurobin1/image/upload/v1567084951/Flinder/Flat_1_Mitte_s0y1yi.jpg")
@@ -205,6 +205,16 @@ puts "flats created"
 pho = Photo.new(flat: f1)
 pho.remote_photo_url = "https://res.cloudinary.com/mathieurobin1/image/upload/v1567084795/Flat_2_Prenzlaeur_Berg_myuyfa.jpg"
 pho.save!
+
+pho = Photo.new(flat: f1)
+pho.remote_photo_url = "https://res.cloudinary.com/mathieurobin1/image/upload/v1567677704/Flinder/Living%20Room/Living_room_9_qhlxrj.jpg"
+pho.save!
+pho = Photo.new(flat: f1)
+pho.remote_photo_url = "https://res.cloudinary.com/mathieurobin1/image/upload/v1567677704/Flinder/Living%20Room/Living_room_8_w2nxyg.jpg"
+pho.save!
+
+
+
 pho = Photo.new(flat: f2)
 pho.remote_photo_url = "https://res.cloudinary.com/mathieurobin1/image/upload/v1567677716/Flinder/Living%20Room/Living_room_12_ayfdk7.jpg"
 pho.save!
