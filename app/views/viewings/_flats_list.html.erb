@@ -1,7 +1,9 @@
-<div class="uk-card uk-card-default uk-width-1-2@m uk-box-shadow-small flat_card flat-box <%= 'active' if index == 0 %>" data-flat-id='<%= flat.id %>'>
+<div class="uk-card uk-card-default uk-width-1-2@m uk-box-shadow-small flat_card flat-box uk-border-rounded <%= 'active' if index == 0 %>" data-flat-id='<%= flat.id %>'>
     <div class="uk-card-media-top uk-border-rounded">
       <!-- <img data-src="https://images.unsplash.com/photo-1470619681920-17fd5fd2f094?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" width="400" height="500" alt="" class="uk-border-rounded" uk-img > -->
+
       <%= cl_image_tag(flat.photos.first.photo, :width=>400, :height=>350, :crop=>"fill")%>
+
     </div>
     <div>
       <h4 class="uk-margin-small-left uk-card-title uk-margin-top uk-margin-remove-bottom"><%= flat.title %></h4>
@@ -14,17 +16,19 @@
           <p class="uk-margin-remove mr-2"><i class="fas fa-ticket-alt mx-2"></i><%= flat.vacant_from %></p>
           <p class= "uk-margin-remove mr-2"><i class="fas fa-door-open mx-2"></i><%= flat.bedroom + 1 %></p>
      </div>
-     <div class="uk-card-footer uk-flex uk-margin-auto">
-       <%= link_to flat_viewings_path(flat, viewing: {like: false}), method: :post, remote: true, id: "reject-btn", class: "uk-button uk-button-danger uk-button-large like-btn uk-border-pill uk-margin-small-right", "data-flat-id" => flat.id  do %>
-           <span uk-icon="icon: close; ratio: 8"></span>
+     <div class="uk-card-footer uk-padding-remove-horizontal">
+       <div class ="uk-container uk-flex uk-flex-center">
+       <%= link_to flat_viewings_path(flat, viewing: {like: false}), method: :post, remote: true, id: "reject-btn", class: "uk-button uk-button-danger uk-button-large like-btn uk-border-pill", "data-flat-id" => flat.id  do %>
+           <span uk-icon="icon: close; ratio: 2"></span>
        <% end %>
          <%= link_to flat_path(flat), id: "info-btn", class: "uk-button uk-button-default uk-button-large like-btn uk-border-pill" do %>
-             <span uk-icon="icon: info; ratio: 8"></span>
+             <span uk-icon="icon: info; ratio: 2"></span>
          <% end %>
-       <%= link_to flat_viewings_path(flat, viewing: {like: true}), method: :post, remote: true, id: "sweet-alert-demo", id: "accept-btn" ,class: "uk-button uk-button-danger uk-button-large like-btn uk-border-pill uk-margin-small-left", "data-flat-id" => flat.id   do %>
-           <span uk-icon="icon: heart; ratio: 8"></span>
+       <%= link_to flat_viewings_path(flat, viewing: {like: true}), method: :post, remote: true, id: "sweet-alert-demo", id: "accept-btn" ,class: "uk-button uk-button-danger uk-button-large like-btn uk-border-pill", "data-flat-id" => flat.id   do %>
+           <span uk-icon="icon: heart; ratio: 2"></span>
        <% end %>
       </div>
-      <div class="uk-card-footer">
-     </div>
+       <div class="uk-card-footer uk-margin-top">
+      </div>
+   </div>
  </div>

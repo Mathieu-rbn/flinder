@@ -2,7 +2,12 @@
   <!-- <hr class="uk-divider-icon"> -->
 
   <header class="py-2 bg-image-full">
-    <img class="img-fluid d-block mx-auto" src="https://uidesign.gbtcdn.com/gb_blog/author/Steve-Lowry-2.png" alt="">
+   <div class="uk-card-header">
+        <div class="uk-grid-small uk-flex-middle" uk-grid>
+            <div class="uk-width-auto border-circle">
+                <%= cl_image_tag @user.profile_photo%>
+            </div>
+
 </header>
 
 <h4>My Profile <%= resource_name.to_s.humanize %></h4>
