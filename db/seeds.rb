@@ -56,13 +56,13 @@ puts "destroy all users"
 
 
 # USERS
-u2 = User.create!(first_name: "Jürgen", last_name: "Nguyen", email: "jurgen@gmail.com",
+u2 = User.create!(first_name: "Jürgen", last_name: "Nguyen", email: "juergen@example.com",
 password: "123456", property_type: "Flat", bathroom: 1, bedroom: 3,
 district: "Prenzlauer Berg", total_rent:1400,
-profile_description: "My name is Jürgen, ....",
+profile_description: "My Name is Juergen. I am work as full-stack-developer in Berlin. Now my wife is pregant in in her 8 months and want to find some nice new home in Prenzlauer Berg. I am looking forward to swap my home with yours.",
 profile_photo:"https://res.cloudinary.com/mathieurobin1/image/upload/v1567674759/Flinder/Jurgen_Profile_Picture_Test_z1jl58.jpg")
 
-u3 = User.create!(first_name: "Angela", last_name: "Merkel", email: "angela@example.com",
+u8 = User.create!(first_name: "Angela", last_name: "Merkel", email: "angela@example.com",
 password: "123456", property_type: "Flat",bathroom: 1, bedroom: 2,
 district: "Mitte", total_rent:1000,
 profile_description: "My name is Angela, I am going to loose my job soon and I need to reduce my lifestyle. I have a 3 room flat but I do not really need them anymore.",
@@ -91,7 +91,7 @@ u7 = User.create!(first_name: "Timothy", last_name: "Constant", email: "timothy@
 password: "123456", property_type: "Flat",bathroom: 1, bedroom: 2,
 district: "Mitte", total_rent:1000,
 profile_photo:"https://res.cloudinary.com/mathieurobin1/image/upload/v1567678166/Flinder/Profile%20Photo/Fake_Profile_5_pikcso.jpg")
-u8 = User.create!(first_name: "Felix", last_name: "Marshall", email: "felix@example.com",
+u3 = User.create!(first_name: "Felix", last_name: "Marshall", email: "felix@example.com",
 password: "123456", property_type: "Flat",bathroom: 1, bedroom: 2,
 district: "Mitte", total_rent:850,
 profile_photo:"https://res.cloudinary.com/mathieurobin1/image/upload/v1567678166/Flinder/Profile%20Photo/Fake_Profile_6_emaheo.jpg")
@@ -108,26 +108,26 @@ puts "users created"
 
 
 # FLATS
-f2 = Flat.create!(address: "Kieler Str. 2, 10115 Berlin", city: "Berlin", district:"Mitte",
-property_type:"Flat", bathroom: 1, bedroom: 1, type_heating:"Electricity",
-year_construction: "1945-1960",square_meter: 55,title: "Well located flat in Mitte",description:"This beautiful flat is located in the heart of Mitte. You are 2 minutes from any public transport, grocery shopping and a lot of bars and restaurant. The appartement is located at the 2d floor and has 2 bedrooms, perfect for a family.",
-vacant_from:"2019/10/1",rent: 950, user_id:u2.id, photo: "https://res.cloudinary.com/mathieurobin1/image/upload/v1567084951/Flinder/Flat_1_Mitte_s0y1yi.jpg")
 
-f3 = Flat.create!(address: "Danziger Str. 60, 10435 Berlin", city: "Berlin", district:"Prenzlauer Berg",
-property_type:"Flat", bathroom: 1, bedroom:3, type_heating:"Electricity",
-year_construction: "1960-1990",square_meter: 80, title: "Beautiful 2 bedroom Flat in PB",description:"This beautiful flat is located in the heart of Prenzlauer Berg. You are 2 minutes from any public transport, grocery shopping and a lot of bars and restaurant. The appartement is located at the 2d floor and has 2 bedrooms, perfect for a family.",
-vacant_from:"2019/10/1",rent: 1400, user_id:u3.id, photo: "https://res.cloudinary.com/mathieurobin1/image/upload/v1567677704/Flinder/Living%20Room/Living_room_7_ml73s2.jpg")
-
-
+f2 = Flat.create!(address: "Chausseestraße 8, 10115 Berlin", city: "Berlin", district:"Mitte",
+property_type:"Flat", bathroom: 1, bedroom: 2, type_heating:"Electricity",
+year_construction: "1945-1960",square_meter: 52,title: "Fully renovated flat in Mitte",description:"This beautiful flat is located in the heart of Mitte. You are 2 minutes from any public transport, grocery shopping and a lot of bars and restaurant. The appartement is located at the 2d floor and has 2 bedrooms, perfect for a family.",
+vacant_from:"2019/10/1",rent:850, user_id:u2.id, photo: "https://res.cloudinary.com/mathieurobin1/image/upload/v1567084948/Flinder/Flat_3_Mitte_cu0gh3.jpg")
 
 f1 = Flat.create!(address: "Sredzkistraße 43, 10435 Berlin", city: "Berlin", district:"Prenzlauer Berg",
 property_type:"Flat", bathroom: 1, bedroom:3, type_heating:"Electricity",
 year_construction: "1960-1990",square_meter: 85,title: "Well located Flat in Prenzlauer Berg",description:"This beautiful flat is located in the heart of Prenzlauer Berg. You are 2 minutes from any public transport, grocery shopping and a lot of bars and restaurant. The appartement is located at the 2d floor and has 2 bedrooms, perfect for a family.",
 vacant_from:"2019/10/1",rent: 1350, user_id:u1.id, photo: "https://res.cloudinary.com/mathieurobin1/image/upload/v1567084949/Flinder/Flat_2_Prenzlaeur_Berg_rg6o9f.jpg")
-f4 = Flat.create!(address: "Kollwitzstraße 37, 10405 Berlin", city: "Berlin", district:"Prenzlauer Berg",
+
+f3 = Flat.create!(address: "Kollwitzstraße 37, 10405 Berlin", city: "Berlin", district:"Prenzlauer Berg",
 property_type:"Flat", bathroom: 1, bedroom:3, type_heating:"Electricity",
 year_construction: "1960-1990",square_meter: 80, title: "Amazing flat with 2 bedroom ",description:"This beautiful flat is located in the heart of Prenzlauer Berg. You are 2 minutes from any public transport, grocery shopping and a lot of bars and restaurant. The appartement is located at the 2d floor and has 2 bedrooms, perfect for a family.",
-vacant_from:"2019/10/1",rent:1200, user_id:u4.id, photo: "https://res.cloudinary.com/mathieurobin1/image/upload/v1567084950/Flinder/Flat_4_Prenzlaeur_Berg_u2mfyc.jpg")
+vacant_from:"2019/10/1",rent:1200, user_id:u3.id, photo: "https://res.cloudinary.com/mathieurobin1/image/upload/v1567084950/Flinder/Flat_4_Prenzlaeur_Berg_u2mfyc.jpg")
+
+f4 = Flat.create!(address: "Kieler Str. 2, 10115 Berlin", city: "Berlin", district:"Mitte",
+property_type:"Flat", bathroom: 1, bedroom: 1, type_heating:"Electricity",
+year_construction: "1945-1960",square_meter: 55,title: "Well located flat in Mitte",description:"This beautiful flat is located in the heart of Mitte. You are 2 minutes from any public transport, grocery shopping and a lot of bars and restaurant. The appartement is located at the 2d floor and has 2 bedrooms, perfect for a family.",
+vacant_from:"2019/10/1",rent: 950, user_id:u4.id, photo: "https://res.cloudinary.com/mathieurobin1/image/upload/v1567084951/Flinder/Flat_1_Mitte_s0y1yi.jpg")
 f5 = Flat.create!(address: "Fehrbelliner Str. 17, 10119 Berlin", city: "Berlin", district:"Prenzlauer Berg",
 property_type:"Flat", bathroom: 1, bedroom:3, type_heating:"Electricity",
 year_construction: "1960-1990",square_meter: 80,title: "Bright flat with 2 bedroom ",description:"This beautiful flat is located in the heart of Prenzlauer Berg. You are 2 minutes from any public transport, grocery shopping and a lot of bars and restaurant. The appartement is located at the 2d floor and has 2 bedrooms, perfect for a family.",
@@ -137,15 +137,16 @@ property_type:"Flat", bathroom: 1, bedroom: 3, type_heating:"Electricity",
 year_construction: "1960-1990",square_meter: 75, title: "2 bedroom flat 1 min from Ubhan",description:"This beautiful flat is located in the heart of Prenzlauer Berg. You are 2 minutes from any public transport, grocery shopping and a lot of bars and restaurant. The appartement is located at the 2d floor and has 2 bedrooms, perfect for a family.",
 vacant_from:"2019/10/1",rent:1250, user_id:u6.id, photo: "https://res.cloudinary.com/mathieurobin1/image/upload/v1567084949/Flinder/Flat_3_Prenzlaeur_Berg_ak5w7r.jpg")
 
+f8 = Flat.create!(address: "Danziger Str. 60, 10435 Berlin", city: "Berlin", district:"Prenzlauer Berg",
+property_type:"Flat", bathroom: 1, bedroom:3, type_heating:"Electricity",
+year_construction: "1960-1990",square_meter: 80, title: "Beautiful 2 bedroom Flat in PB",description:"This beautiful flat is located in the heart of Prenzlauer Berg. You are 2 minutes from any public transport, grocery shopping and a lot of bars and restaurant. The appartement is located at the 2d floor and has 2 bedrooms, perfect for a family.",
+vacant_from:"2019/10/1",rent: 1400, user_id:u8.id, photo: "https://res.cloudinary.com/mathieurobin1/image/upload/v1567677704/Flinder/Living%20Room/Living_room_7_ml73s2.jpg")
+
 
 f7 = Flat.create!(address: "Lehrter Str. 30, 10557 Berlin", city: "Berlin", district:"Mitte",
 property_type:"Flat", bathroom: 1, bedroom: 2, type_heating:"Electricity",
 year_construction: "1945-1960",square_meter: 50,title: "Central flat in Mitte ",description:"This beautiful flat is located in the heart of Mitte. You are 2 minutes from any public transport, grocery shopping and a lot of bars and restaurant. The appartement is located at the 2d floor and has 2 bedrooms, perfect for a family.",
 vacant_from:"2019/10/1",rent:900, user_id:u7.id, photo: "https://res.cloudinary.com/mathieurobin1/image/upload/v1567084949/Flinder/Flat_2_Mitte_dwfbqj.jpg")
-f8 = Flat.create!(address: "Chausseestraße 8, 10115 Berlin", city: "Berlin", district:"Mitte",
-property_type:"Flat", bathroom: 1, bedroom: 2, type_heating:"Electricity",
-year_construction: "1945-1960",square_meter: 52,title: "Fully renovated flat in Mitte",description:"This beautiful flat is located in the heart of Mitte. You are 2 minutes from any public transport, grocery shopping and a lot of bars and restaurant. The appartement is located at the 2d floor and has 2 bedrooms, perfect for a family.",
-vacant_from:"2019/10/1",rent:850, user_id:u8.id, photo: "https://res.cloudinary.com/mathieurobin1/image/upload/v1567084948/Flinder/Flat_3_Mitte_cu0gh3.jpg")
 f9 = Flat.create!(address: "Schumannstraße 13a, 10117 Berlin", city: "Berlin", district:"Mitte",
 property_type:"Flat", bathroom:1, bedroom:2, type_heating:"Electricity",
 year_construction: "1945-1960",square_meter:55, title: "Shiny flat in central Berlin",description:"This beautiful flat is located in the heart of Mitte. You are 2 minutes from any public transport, grocery shopping and a lot of bars and restaurant. The appartement is located at the 2d floor and has 2 bedrooms, perfect for a family.",
