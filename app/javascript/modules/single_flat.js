@@ -7,7 +7,7 @@ return  `
     </div>
 
     <div>
-      <h4 class="uk-margin-small-left uk-card-title uk-margin-top uk-margin-remove-bottom">${flat.title}</h4>
+      <h4 class="uk-margin-small-left uk-card-title uk-margin-top uk-margin-remove-bottom uk-text-bold">${flat.title}</h4>
       <p class="uk-margin-small-left uk-text-small uk-margin-remove-top"><span uk-icon="location"></span>${flat.address}</p>
       <hr>
     </div>
@@ -31,7 +31,7 @@ return  `
         <span uk-icon="icon: info; ratio: 2"></span>
        </a>
        <a href="/flats/${flat.id}/viewings?viewing%5Blike%5D=true" data-remote="true" data-method="post" id="accept-btn" class="uk-button uk-button-danger uk-button-large like-btn uk-border-pill" data-flat-id="${flat.id}">
-         <span uk-icon="icon: heart; ratio: 2"></span>
+         <i class="fas fa-heart fa-3x", id="icon-info"></i>
        </a>
        </div>
     </div>

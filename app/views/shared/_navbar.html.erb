@@ -36,7 +36,7 @@
     <div class="uk-flex-top">
       <% if current_user  %>
       <h4 id="banner-name">Hello <%= current_user.first_name %></h4>
-      <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
+      <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src= "<%= current_user && cl_image_path(current_user.profile_photo) %>" />
       <% end  %>
     </div>
     <hr>
