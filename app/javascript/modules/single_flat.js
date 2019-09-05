@@ -3,7 +3,7 @@ return  `
 <div class="uk-card uk-card-default uk-width-1-2@m uk-box-shadow-small flat-box  ${index == 0 ? 'active' : '' }">
     <div class="uk-card-media-top uk-border-rounded">
 
-    <img data-src="${flat.photo}" width="400" height="350" alt="" class="uk-border-rounded" uk-img >
+    <img data-src="${flat.photo}" width="400" style="height: 350px" alt="${flat.title}" class="uk-border-rounded" uk-img >
     </div>
 
     <div>
