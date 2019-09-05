@@ -6,14 +6,14 @@
         <% end %>
         <hr class="uk-divider-icon uk-margin-remove uk-text-meta ">
         <dl class="uk-description-list">
-            <dt class="uk-text uk-text-bold">Description</dt>
+            <dt class="uk-text uk-text-bold uk-text-primary">Description</dt>
             <dd class="uk-dropcap uk-text-bold"><%= @flat.description %></dd>
         </dl>
 
         <!-- Flat Extras -->
         <hr class="uk-divider-icon">
         <dl class="uk-description-list">
-          <dt class="uk-flex uk-text-bold">Features</dt>
+          <dt class="uk-flex uk-text-bold uk-text-primary">Features</dt>
             <p class="mx-1" ><i class="fas fa-bed mr-1"></i><%= @flat.bedroom%></p>
             <p class="mx-1" ><i class="fas fa-bath mr-1"></i><%= @flat.bathroom%></p>
             <p class="mx-1" ><i class="fas fa-burn mr-1"></i><%= @flat.type_heating %></p>
@@ -24,7 +24,7 @@
 
         <hr class="uk-divider-icon uk-margin-remove uk-text-meta ">
         <dl class="uk-description-list">
-            <dt class="uk-text uk-text-bold">Photos</dt>
+            <dt class="uk-text uk-text-bold uk-text-primary">Photos</dt>
             <%= render "flats/carousel", flat: @flat %>
         </dl>
 
@@ -34,7 +34,7 @@
 
                 <!-- Flat Location -->
                 <dl class="uk-description-list">
-                <dt class="uk-text-bold">Flat Location</dt>
+                <dt class="uk-text-bold uk-text-primary">Flat Location</dt>
                   <div
                     id="map"
                     style="width: 100%;
@@ -44,7 +44,7 @@
                     class="uk-box-shadow-small uk-border-rounded"
                   ></div>
                   <br>
-                  <a href="#" uk-totop uk-scroll>Top</a>
+                  <a href="#" uk-totop uk-scroll, class="uk-text-primary">Top</a>
           </div>
 
 </div>
