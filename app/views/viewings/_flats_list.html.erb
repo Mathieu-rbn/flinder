@@ -6,8 +6,8 @@
 
     </div>
     <div>
-      <h4 class="uk-margin-small-left uk-card-title uk-margin-top uk-margin-remove-bottom"><%= flat.title %></h4>
-      <p class="uk-margin-small-left uk-text-small uk-margin-remove-top"><span uk-icon="location"></span><%= flat.address %></p>
+      <h4 class="uk-margin-small-left uk-margin-top uk-margin-remove-bottom uk-card-title uk-text-bold"><%= flat.title %></h4>
+      <p class="uk-margin-small-left uk-text-small uk-margin-remove-top uk-card-title"><span uk-icon="location"></span><%= flat.address %></p>
       <hr>
     </div>
      <div class="uk-card-body uk-flex uk-padding-remove-vertical ">
@@ -18,17 +18,19 @@
      </div>
      <div class="uk-card-footer uk-padding-remove-horizontal">
        <div class ="uk-container uk-flex uk-flex-center">
-       <%= link_to flat_viewings_path(flat, viewing: {like: false}), method: :post, remote: true, id: "reject-btn", class: "uk-button uk-button-danger uk-button-large like-btn uk-border-pill", "data-flat-id" => flat.id  do %>
-           <span uk-icon="icon: close; ratio: 2"></span>
+       <%= link_to flat_viewings_path(flat, viewing: {like: false}), method: :post, remote: true, id: "reject-btn", class: "uk-button uk-button-danger uk-button-large like-btn uk-border-pill ", "data-flat-id" => flat.id  do %>
+           <i class="fas fa-times fa-3x"></i>
        <% end %>
          <%= link_to flat_path(flat), id: "info-btn", class: "uk-button uk-button-default uk-button-large like-btn uk-border-pill" do %>
-             <span uk-icon="icon: info; ratio: 2"></span>
+             <i class="fas fa-info fa-3x" style="color: white;"></i>
          <% end %>
-       <%= link_to flat_viewings_path(flat, viewing: {like: true}), method: :post, remote: true, id: "sweet-alert-demo", id: "accept-btn" ,class: "uk-button uk-button-danger uk-button-large like-btn uk-border-pill", "data-flat-id" => flat.id   do %>
-           <span uk-icon="icon: heart; ratio: 2"></span>
+       <%= link_to flat_viewings_path(flat, viewing: {like: true}), method: :post, remote: true, id: "sweet-alert-demo", id: "accept-btn" ,class: "uk-button uk-button-danger uk-button-large like-btn uk-border-pill d-flex", "data-flat-id" => flat.id   do %>
+           <i class="fas fa-heart fa-3x", id="icon-info"></i>
        <% end %>
       </div>
        <div class="uk-card-footer uk-margin-top">
       </div>
    </div>
  </div>
+
+        <!-- TOP CONTAINER -->
