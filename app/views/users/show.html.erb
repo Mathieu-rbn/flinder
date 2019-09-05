@@ -1,13 +1,11 @@
-<br><br>
 <div class="container">
   <div class="row">
     <div class="col">
-      <h2 align="center">Welcome to Flinder <%= @user.first_name %></h1>
-        <br>
-      <div class="card bg-light mb-3" style="max-width: 100rem;">
-  <div class="card-header"> <strong> Your preferences</strong></div>
+      <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light uk-border-rounded" style="max-width: 100rem;">
   <div class="card-body">
-    <h4 class="card-title">What will Flinder show you?</h4>
+    <span class="uk-margin-small-right" uk-icon="icon: search; ratio: 8"></span>
+    <h4 class="card-title"><%= current_user.first_name %>, Your are looking for...</h4>
+
     <p class="card-text">Flats located in <strong><%=@user.district%></strong>, which have <strong><%= @user.bedroom %> bedrooms </strong> and with <strong>prices not exceeding <%= @user.total_rent%> euros</strong>. <br><br>
     Let's start!</p>
   </div>
@@ -15,7 +13,6 @@
 <%= link_to "Search", flats_path(), class: "uk-button uk-button-danger uk-width-1-1 uk-margin-small-top uk-border-pill" %>
     </div>
   </div>
-  <br><br><br><br><br><br><br><br><br><br><br><br>
 </div>
 
 
