@@ -9,7 +9,11 @@
             <h1 class="uk-margin-remove-top">Flinder.</h1>
             <p class="subtitle-text uk-visible@s">Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             quis nostrud exercitation ullamco </p>
-            <a href="flats" title="Learn More" class="uk-button uk-border-pill uk-button-danger"  data-uk-scrollspy-class="uk-animation-fade">Get Started</a>
+            <% if current_user %>
+            <a href="users/<%=current_user.id%>" title="Learn More" class="uk-button uk-border-pill uk-button-danger"  data-uk-scrollspy-class="uk-animation-fade">Get Started</a>
+            <% else %>
+            <a href="users/sign_up" title="Learn More" class="uk-button uk-border-pill uk-button-danger"  data-uk-scrollspy-class="uk-animation-fade">Get Started</a>
+            <% end %>
           </div>
         </div>
         <!-- /TOP CONTAINER -->
