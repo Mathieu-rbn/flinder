@@ -50,7 +50,7 @@
                 return sendMessage(getMessageText());
             }
         });
-        sendMessage('Hi Juan, we had a Match. I want to talk with you about your flat! Please call me when you have time +491796130152. Mathieu');
+        sendMessage('Hi Jurgen, we had a Match. I want to talk with you about your flat! Please call me when you have time +491796130152. Angela');
         setTimeout(function () {
             return sendMessage('Great! I will be waiting for your call');
         }, 20000);
