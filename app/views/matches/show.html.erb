@@ -6,7 +6,7 @@
     <div class="uk-card-header">
         <div class="uk-grid-small uk-flex-middle" uk-grid>
             <div class="uk-width-auto">
-                <%= cl_image_tag @flat.user.profile_photo%>
+                <%= cl_image_tag @flat.user.profile_photo, class:"uk-border-circle"%>
             </div>
           <div class="uk-width-expand">
             <h5 class="uk-card uk-text-center"><%= @flat.user.first_name %> <%= @flat.user.last_name %></h5>
