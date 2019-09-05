@@ -53,17 +53,17 @@
            <span uk-icon="plus-circle"></span> My home
        <% end %></li>
       <li><%= link_to edit_user_registration_path(@user), class: "nav-font" do %>
-            <span uk-icon="user"></span> My Profile & Preferences
+            <span uk-icon="user"></span> My profile & preferences
         <% end %></li>
         <hr>
       <% if current_user.nil? %>
       <li><%= link_to new_user_session_path, class: "nav-font" do %>
-            <span uk-icon="sign-in"></span> sign-in
+            <span uk-icon="sign-in"></span> Sign-in
         <% end %></li>
         <% end %>
         <% if user_signed_in? %>
       <li><%= link_to destroy_user_session_path, method: :delete, class: "nav-font" do %>
-            <span uk-icon="sign-out"></span> sign-out
+            <span uk-icon="sign-out"></span> Sign-out
         <% end %></li>
         <% end %>
     </ul>
