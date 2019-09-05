@@ -64,7 +64,7 @@ profile_photo:"https://res.cloudinary.com/mathieurobin1/image/upload/v1567674759
 u3 = User.create!(first_name: "Angela", last_name: "Merkel", email: "angela@example.com",
 password: "123456", property_type: "Flat",bathroom: 1, bedroom: 2,
 district: "Mitte", total_rent:1000,
-profile_description: "My name is Angela, I am going to loose my job sooon and I need to reduce my lifestyle. I have a 3 room flat but I do not really need them anymore.",
+profile_description: "My name is Angela, I am going to loose my job soon and I need to reduce my lifestyle. I have a 3 room flat but I do not really need them anymore.",
 profile_photo: "https://res.cloudinary.com/mathieurobin1/image/upload/v1567674573/Flinder/Angela_profile_picture_jnjnbz.jpg")
 
 
@@ -107,15 +107,16 @@ puts "users created"
 
 
 # FLATS
-f1 = Flat.create!(address: "Danziger Str. 60, 10435 Berlin", city: "Berlin", district:"Prenzlaeur Berg",
-property_type:"Flat", bathroom: 1, bedroom:3, type_heating:"Electricity",
-year_construction: "1960-1990",square_meter: 80, title: "Beautiful 2 bedroom Flat in PB",description:"This beautiful flat is located in the heart of Prenzlaeur Berg. You are 2 minutes from any public transport, grocery shopping and a lot of bars and restaurant. The appartement is located at the 2d floor and has 2 bedrooms, perfect for a family.",
-vacant_from:"2019/10/1",rent: 1400, user_id:u1.id, photo: "https://res.cloudinary.com/mathieurobin1/image/upload/v1567677704/Flinder/Living%20Room/Living_room_7_ml73s2.jpg")
-
-f3 = Flat.create!(address: "Kieler Str. 2, 10115 Berlin", city: "Berlin", district:"Mitte",
+f1 = Flat.create!(address: "Kieler Str. 2, 10115 Berlin", city: "Berlin", district:"Mitte",
 property_type:"Flat", bathroom: 1, bedroom: 1, type_heating:"Electricity",
 year_construction: "1945-1960",square_meter: 55,title: "Well located flat in the heart of Mitte",description:"This beautiful flat is located in the heart of Mitte. You are 2 minutes from any public transport, grocery shopping and a lot of bars and restaurant. The appartement is located at the 2d floor and has 2 bedrooms, perfect for a family.",
-vacant_from:"2019/10/1",rent: 950, user_id:u3.id, photo: "https://res.cloudinary.com/mathieurobin1/image/upload/v1567084951/Flinder/Flat_1_Mitte_s0y1yi.jpg")
+vacant_from:"2019/10/1",rent: 950, user_id:u1.id, photo: "https://res.cloudinary.com/mathieurobin1/image/upload/v1567084951/Flinder/Flat_1_Mitte_s0y1yi.jpg")
+
+f3 = Flat.create!(address: "Danziger Str. 60, 10435 Berlin", city: "Berlin", district:"Prenzlaeur Berg",
+property_type:"Flat", bathroom: 1, bedroom:3, type_heating:"Electricity",
+year_construction: "1960-1990",square_meter: 80, title: "Beautiful 2 bedroom Flat in PB",description:"This beautiful flat is located in the heart of Prenzlaeur Berg. You are 2 minutes from any public transport, grocery shopping and a lot of bars and restaurant. The appartement is located at the 2d floor and has 2 bedrooms, perfect for a family.",
+vacant_from:"2019/10/1",rent: 1400, user_id:u3.id, photo: "https://res.cloudinary.com/mathieurobin1/image/upload/v1567677704/Flinder/Living%20Room/Living_room_7_ml73s2.jpg")
+
 
 
 f2 = Flat.create!(address: "Sredzkistraße 43, 10435 Berlin", city: "Berlin", district:"Prenzlaeur Berg",
