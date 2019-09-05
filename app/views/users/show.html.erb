@@ -1,8 +1,8 @@
 <div class="container">
   <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light uk-border-rounded">
   <div class="card-body">
-    <span class="uk-margin-small-right" uk-icon="icon: search; ratio: 4"></span>
-    <h4 class="card-title"><%= current_user.first_name %>, Your are looking for...</h4>
+    <span class="uk-margin-small-right" uk-icon="icon: search; ratio: 3"></span>
+    <h4 class="card-title"><%= current_user.first_name %>, You are looking for...</h4>
     <p class="card-text">Flats located in <strong><%=@user.district%></strong>, which have <strong><%= @user.bedroom %> bedrooms </strong> and with <strong>prices not exceeding <%= @user.total_rent%> euros</strong>. <br><br>
     Let's start!</p>
   </div>
