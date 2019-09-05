@@ -13,4 +13,10 @@ class ApplicationController < ActionController::Base
                                  :garage, :level_floor, :floors_number, :vacant_from, :square_meter,
                                  :land, :year_construction, :type_heating, :elevator])
   end
+
+  def default_url_options
+    { host: ENV["www.flinder.xyz"] || "localhost:3000" }
+  end
+
+
 end

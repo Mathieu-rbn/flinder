@@ -1,0 +1,5 @@
+meta_product_name: "Flinder"
+meta_title: "Flinder - Match & Find your new home"
+meta_description: "Flinder brings people together that want to wants to swap their homes."
+meta_image: "flinder.png" # should exist in `app/assets/images/`
+twitter_account: "@JrgenNguyen1"   # required for Twitter Cards
