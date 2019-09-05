@@ -5,9 +5,15 @@
         <!-- TOP CONTAINER -->
         <div class="uk-container uk-flex-auto top-container uk-position-relative uk-margin-medium-top" data-uk-parallax="y: 0,50; easing:0; opacity:0.2">
           <div class="uk-width-1-2@s" data-uk-scrollspy="cls: uk-animation-slide-right-medium; target: > *; delay: 150">
-            <h6 class="uk-text-primary uk-margin-small-bottom">Match & Find your new home <br> out of 7500 offerings</h6>
+            <h6 class="uk-text-primary uk-margin-small-bottom">Match & Find your home</h6>
             <h1 class="uk-margin-remove-top">Flinder.</h1>
-            <a href="flats" title="Learn More" class="uk-button uk-border-pill uk-button-danger"  data-uk-scrollspy-class="uk-animation-fade">Get Started</a>
+            <p class="subtitle-text uk-visible@s">Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco </p>
+            <% if current_user %>
+            <a href="users/<%=current_user.id%>" title="Learn More" class="uk-button uk-border-pill uk-button-danger"  data-uk-scrollspy-class="uk-animation-fade">Get Started</a>
+            <% else %>
+            <a href="users/sign_up" title="Learn More" class="uk-button uk-border-pill uk-button-danger"  data-uk-scrollspy-class="uk-animation-fade">Get Started</a>
+            <% end %>
           </div>
         </div>
         <!-- /TOP CONTAINER -->
@@ -43,15 +49,9 @@
                 <img src="" alt="" data-uk-img>
               </div>
               <div data-uk-scrollspy-class="uk-animation-slide-right-medium">
-                <h6 class="uk-text-primary">Torture</h6>
-                <h2 class="uk-margin-small-top">Finding an apartment is a torture.</h2>
-                <ul>
-                  <li class="subtitle-text">You are looking for an apartment in a city with acute housing shortage?</li>
-                  <li class="subtitle-text">Are you spending your life looking for an apartment instead of your loved ones?</li>
-                  <li class="subtitle-text">You are an emotional wreck after the many rejections.</li>
-                  <li class="subtitle-text">You're tired of greasy brokers.</li>
-                </ul>
-                  <p class="subtitle-text">If you feel understood you are in the right place.</p>
+                <h6 class="uk-text-primary">Challenge</h6>
+                <h2 class="uk-margin-small-top">Tired of....</h2>
+                <p class="subtitle-text">Everybody of you have experience with looking for accommodation in Berlin or somewhere else. Most of the time you and spend time like this.
                 </p>
               </div>
             </div>
@@ -62,12 +62,11 @@
                 <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/marketing-8.svg" alt="" data-uk-img>
               </div>
               <div data-uk-scrollspy-class="uk-animation-slide-right-medium">
-                <h6 class="uk-text-primary">Easy home swapping</h6>
-                <h2 class="uk-margin-small-top">Flinder helps you to swap your home</h2>
+                <h6 class="uk-text-primary">MAIN REASONS</h6>
+                <h2 class="uk-margin-small-top">Flinder is the first swapping...</h2>
                 <p class="subtitle-text">
-                  But ever thought about swapping your accommodation? That's your biggest asset you can have finding your new home! Maybe there is somebody out there loving to have your accommodation and might  have the accommodation you're looking for?
-
-                  Here comes Flinder in.
+                  But ever thought about swapping your accommodation? That's your biggest asset you can have finding your new home! Maybe there is somebody out there loving to have your accommodation and might  have the accommodation you're looking for? There where some former approaches just on craiglist or ebay kleinanzeigen - poorly implemented
+                  This is where Flinder comes in!
                 </p>
               </div>
             </div>
@@ -90,28 +89,29 @@
             <i class="far fa-edit fa-4x"></i>
             <h4 class="uk-margin-small-bottom uk-margin-top uk-margin-remove-adjacent">Step1: You and your flat</h4>
             </span>
-            <p>Create your profile of you and current apartment. This will give your potential Flinder swappers a fantastic impression of your home. </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
           <div class="uk-text-center">
             <span style="color: Dodgerblue;">
             <i class="fas fa-stream fa-4x"></i>
             <h4 class="uk-margin-small-bottom uk-margin-top uk-margin-remove-adjacent">Step 2: Your preferences</h4>
             </span>
-            <p>Square meters, rent and district. Three simple ingredients for your new home.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
           <div class="uk-text-center">
             <span style="color: Dodgerblue;">
             <<i class="fas fa-magic fa-4x"></i>
             </span>
             <h4 class="uk-margin-small-bottom uk-margin-top uk-margin-remove-adjacent">Step 3: Browse</h4>
-            <p>Explore the rich offer and find your dream home.</p>
+            <p>Lorem ipsum dolor sit amet, co
+            nsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
           <div class="uk-text-center">
             <span style="color: Dodgerblue;">
             <i class="fas fa-retweet fa-4x"></i>
             <h4 class="uk-margin-small-bottom uk-margin-top uk-margin-remove-adjacent">Step 4: The Flinder Moment</h4>
             </span>
-            <p>If it comes to a match, you can directly contact your future home.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
         </div>
       </div>
