@@ -24,14 +24,14 @@ return  `
      </div>
      <div class="uk-card-footer uk-padding-remove-horizontal">
       <div class ="uk-container uk-flex uk-flex-center">
-       <a href="/flats/${flat.id}/viewings?viewing%5Blike%5D=false" data-remote="true" data-method="post"  class="uk-button uk-button-danger uk-button-large like-btn uk-border-pill" data-flat-id="${flat.id}">
+       <a href="/flats/${flat.id}/viewings?viewing%5Blike%5D=false" id="reject-btn" data-remote="true" data-method="post"  class="uk-button uk-button-danger uk-button-large like-btn uk-border-pill" data-flat-id="${flat.id}">
         <span uk-icon="icon: close; ratio: 2"></span>
        </a>
        <a href="/flats/${flat.id}" id="info-btn" class="uk-button uk-button-default uk-button-large like-btn uk-border-pill" data-flat-id="${flat.id}">
         <span uk-icon="icon: info; ratio: 2"></span>
        </a>
        <a href="/flats/${flat.id}/viewings?viewing%5Blike%5D=true" data-remote="true" data-method="post" id="accept-btn" class="uk-button uk-button-danger uk-button-large like-btn uk-border-pill" data-flat-id="${flat.id}">
-         <i class="fas fa-heart fa-3x", id="icon-info"></i>
+         <span uk-icon="icon: heart; ratio: 2"></span>
        </a>
        </div>
     </div>
