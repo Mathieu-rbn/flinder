@@ -3,7 +3,7 @@ return  `
 <div class="uk-card uk-card-default uk-width-1-2@m uk-box-shadow-small flat-box  ${index == 0 ? 'active' : '' }">
     <div class="uk-card-media-top uk-border-rounded">
 
-    <img data-src="${flat.photo}" width="400" style="height: 350px" alt="${flat.title}" class="uk-border-rounded" uk-img >
+    <img data-src="${flat.photo}" width="400" style="height: 350px; object-fit: contain;" alt="${flat.title}" class="uk-border-rounded" uk-img >
     </div>
 
     <div>
@@ -24,10 +24,10 @@ return  `
      </div>
      <div class="uk-card-footer uk-padding-remove-horizontal">
       <div class ="uk-container uk-flex uk-flex-center">
-       <a href="/flats/${flat.id}/viewings?viewing%5Blike%5D=false" data-remote="true" data-method="post" , class="uk-button uk-button-danger uk-button-large like-btn uk-border-pill" data-flat-id="${flat.id}">
+       <a href="/flats/${flat.id}/viewings?viewing%5Blike%5D=false" data-remote="true" data-method="post"  class="uk-button uk-button-danger uk-button-large like-btn uk-border-pill" data-flat-id="${flat.id}">
         <span uk-icon="icon: close; ratio: 2"></span>
        </a>
-       <a href="/flats/${flat.id}/" data-remote="true" id="info-btn" class="uk-button uk-button-default uk-button-large like-btn uk-border-pill" data-flat-id="${flat.id}">
+       <a href="/flats/${flat.id}" id="info-btn" class="uk-button uk-button-default uk-button-large like-btn uk-border-pill" data-flat-id="${flat.id}">
         <span uk-icon="icon: info; ratio: 2"></span>
        </a>
        <a href="/flats/${flat.id}/viewings?viewing%5Blike%5D=true" data-remote="true" data-method="post" id="accept-btn" class="uk-button uk-button-danger uk-button-large like-btn uk-border-pill" data-flat-id="${flat.id}">
