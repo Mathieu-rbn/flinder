@@ -152,7 +152,7 @@ vacant_from:"2019/10/1",rent:1300, user_id:u5.id, photo: "https://res.cloudinary
 
 f8 = Flat.create!(address: "Danziger Str. 60, 10435 Berlin", city: "Berlin", district:"Prenzlauer Berg",
 property_type:"Flat", bathroom: 1, bedroom:3, type_heating:"Electricity",
-year_construction: "1960-1990",square_meter: 80, title: "Beautiful 3 bedroom Flat in PB",description:"This beautiful flat is located in the heart of Prenzlauer Berg. You are 2 minutes from any public transport, grocery shopping and a lot of bars and restaurant. The appartement is located at the 2d floor and has 2 bedrooms, perfect for a family.",
+year_construction: "1960-1990",square_meter: 80, title: "Beautiful 3 bedroom Flat",description:"This beautiful flat is located in the heart of Prenzlauer Berg. You are 2 minutes from any public transport, grocery shopping and a lot of bars and restaurant. The appartement is located at the 2d floor and has 2 bedrooms, perfect for a family.",
 vacant_from:"2019/10/1",rent: 1400, user_id:u8.id, photo: "https://res.cloudinary.com/mathieurobin1/image/upload/v1567677704/Flinder/Living%20Room/Living_room_7_ml73s2.jpg")
 
 f6 = Flat.create!(address: "Kastanienallee 82, 10435 Berlin", city: "Berlin", district:"Prenzlauer Berg",
