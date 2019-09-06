@@ -16,7 +16,7 @@ return  `
           <p class="uk-margin-remove lead mr-2"><i class="fas fa-euro-sign  fa-lg mx-2"></i>
             ${flat.rent}</p>
           <p class="uk-margin-remove lead mr-2"><i class="fas fa-home fa-lg  mx-2"></i>
-            ${flat.square_meter " sm"}</p>
+            ${flat.square_meter + " sm"}</p>
           <p class= "uk-margin-remove lead mr-2"><i class="fas fa-bed fa-lg  mx-2"></i>
 
             ${flat.bedroom + 1}</p>
