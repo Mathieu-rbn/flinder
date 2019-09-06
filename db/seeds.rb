@@ -124,7 +124,6 @@ property_type:"Flat", bathroom: 1, bedroom:3, type_heating:"Electricity",
 year_construction: "1960-1990",square_meter: 80, title: "Amazing flat with 2 bedroom ",description:"This beautiful flat is located in the heart of Prenzlauer Berg. You are 2 minutes from any public transport, grocery shopping and a lot of bars and restaurant. The appartement is located at the 2d floor and has 2 bedrooms, perfect for a family.",
 vacant_from:"2019/10/1",rent:1200, user_id:u3.id, photo: "https://res.cloudinary.com/mathieurobin1/image/upload/v1567084950/Flinder/Flat_4_Prenzlaeur_Berg_u2mfyc.jpg")
 
-kiel
 f4 = Flat.create!(address: "er Str. 2, 10115 Berlin", city: "Berlin", district:"Mitte",
 property_type:"Flat", bathroom: 1, bedroom: 1, type_heating:"Electricity",
 year_construction: "1945-1960",square_meter: 55,title: "Well located flat in Mitte",description:"This beautiful flat is located in the heart of Mitte. You are 2 minutes from any public transport, grocery shopping and a lot of bars and restaurant. The appartement is located at the 2d floor and has 2 bedrooms, perfect for a family.",
