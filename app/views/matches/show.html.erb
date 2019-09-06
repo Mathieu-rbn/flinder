@@ -4,10 +4,10 @@
       <span uk-icon="chevron-left" class="uk-margin-remove"></span> Back
   <% end %>
     <div class="uk-card-header">
-        <div class="uk-grid-small uk-flex-middle" uk-grid>
-            <div class="uk-width-auto uk-align-center">
-                <%= cl_image_tag @flat.user.profile_photo, class: "avatar1"%>
+            <div class="uk-align-center">
+                <%= cl_image_tag @flat.user.profile_photo,  class: "uk-align-center uk-border-pill", :width=>300, :height=>300, :crop=>"fill"%>
             </div>
+        <div class="uk-grid-small uk-flex-middle" uk-grid>
           <div class="uk-width-expand">
             <h5 class="uk-card uk-text-center "><%= @flat.user.first_name %> <%= @flat.user.last_name %></h5>
                <hr class="uk-divider-icon">
